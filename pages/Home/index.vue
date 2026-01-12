@@ -39,4 +39,19 @@ useScrollTrigger(
     start: 'top 40%',
   }
 )
+
+onMounted(() => {
+  setTimeout(async () => {
+    try {
+      const { useDocumentation } = await import('atomic')
+      const doc = useDocumentation()
+
+      await doc.prefetchFirstPage()
+
+      await doc.prefetchAll()
+    } catch (error) {
+      console.error('Failed to prefetch documentation:', error)
+    }
+  }, 1000)
+})
 </script>
