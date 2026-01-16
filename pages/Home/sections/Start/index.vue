@@ -18,16 +18,18 @@
           />
 
           <div class="cta">
-            <ad-button
+            <nuc-hexagons-button
               label="Try it out!"
-              class="start-button caterpillar"
+              class="start-button"
+              text
               @click="navigateToUrl('/register')"
             />
-            <ad-button
+            <nuc-hexagons-button
               label="GitHub"
               alt="GitHub logo"
-              :src="technologiesImgUrl + 'github.svg'"
-              class="start-button caterpillar"
+              icon="prime:github"
+              class="start-button"
+              text
               @click="navigateToUrl('https://github.com/Nucleify/Nucleify')"
             />
           </div>
