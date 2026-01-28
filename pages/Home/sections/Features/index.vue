@@ -1,10 +1,12 @@
 <template>
   <section id="features">
+    <nuc-content />
+    <nuc-conversion />
+    <nuc-performance />
     <nuc-charts />
-    <nuc-access />
   </section>
 </template>
 
 <script setup lang="ts">
-import { NucAccess, NucCharts } from './'
+import { NucCharts, NucContent, NucConversion, NucPerformance } from './'
 </script>

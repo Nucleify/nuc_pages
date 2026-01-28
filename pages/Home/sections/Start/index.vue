@@ -1,84 +1,63 @@
 <template>
   <section id="start">
-    <div class="container">
-      <div class="container start-container">
-        <nuc-animation-bounce class="start-bounce-animation" />
-        <div class="left-side">
-          <ad-heading :tag="1" class="header">
-            One
-            <span class="shiny first-text">place</span> <br />
-            for all
-            <span class="shiny">your pages</span>
-          </ad-heading>
+    <div class="container start-container">
+      <div class="start-left">
+        <span class="start-badge">LAUNCH WEBSITE UNDER A WEEK</span>
+        
+        <h1 class="start-heading">
+          Build Your Online Presence That Converts Visitors Into Clients
+        </h1>
+        
+        <p class="start-description">
+          A clear, fast website designed to get real people to contact you. 
+          We follow you step by step and put something serious online that truly represents your business.
+        </p>
 
-          <ad-heading
-            :tag="2"
-            text="Build scalable pages with Nucleify - a modular page builder for Laravel & Nuxt powered by atomic design."
-            class="start-description"
-          />
+        <div class="start-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <Icon name="mdi:currency-usd" />
+            </div>
+            <div class="feature-content">
+              <span>Save time & money</span>
+              <p>cut development costs with ready-to-use solutions</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <Icon name="mdi:lightning-bolt" />
+            </div>
+            <div class="feature-content">
+              <span>Lightning-fast performance</span>
+              <p>optimized for speed, SEO, and user experience</p>
+            </div>
+          </div>
 
-          <div class="cta">
-            <nuc-hexagons-button
-              label="Try it out!"
-              class="start-button"
-              text
-              @click="navigateToUrl('/register')"
-            />
-            <nuc-hexagons-button
-              label="GitHub"
-              alt="GitHub logo"
-              icon="prime:github"
-              class="start-button"
-              text
-              @click="navigateToUrl('https://github.com/Nucleify/Nucleify')"
-            />
+          <div class="feature-item">
+            <div class="feature-icon">
+              <Icon name="mdi:shield-check" />
+            </div>
+            <div class="feature-content">
+              <span>Secure & reliable</span>
+              <p>your data is safe, your site always online</p>
+            </div>
           </div>
         </div>
+
+        <p class="start-note">
+          Ready to accelerate your project? Let's build something extraordinary together!
+        </p>
+
+        <div class="start-social-proof">
+          <Icon name="mdi:rocket-launch-outline" />
+          <span>Start growing your business online today</span>
+        </div>
+      </div>
+
+      <div class="start-right">
+        <nuc-section-email-us />
       </div>
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import gsap from 'gsap'
-
-import {
-  bounceFadeIn,
-  navigateToUrl,
-  useScrollTrigger,
-  useSplitText,
-} from 'atomic'
-
-useSplitText().animate('.start-container .header', 500, 0.2, 0.1)
-useSplitText().animate('.start-container .start-description', 1000, 0.2, 0.1)
-
-useScrollTrigger('.start-container', () => {
-  bounceFadeIn('.cta .start-button:nth-of-type(1)', {
-    delay: 2.2,
-  })
-  bounceFadeIn('.cta .start-button:nth-of-type(2)', {
-    delay: 2.7,
-  })
-})
-
-useScrollTrigger(
-  '.v1-release-countdown',
-  () => {
-    bounceFadeIn('.v1-release-countdown', {
-      delay: 0.3,
-    })
-  },
-  {
-    start: 'top 70%',
-  }
-)
-
-onMounted(() => {
-  gsap.to('.start-bounce-animation', {
-    opacity: 1,
-    duration: 0.3,
-    ease: 'power2.out',
-    delay: 1.2,
-  })
-})
-</script>

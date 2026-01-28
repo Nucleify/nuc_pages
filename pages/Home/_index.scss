@@ -1,10 +1,20 @@
 @import 'sections';
 
 .home-container {
-  padding-top: 140px;
+  padding: 5rem 1rem;
 
-  @media (min-width: $sm) {
-    padding-top: 180px;
+  @media (min-width: $lg) {
+    padding: 3.5rem 0;
+  }
+
+  .p-card {
+    background: rgb(16 185 129 / 3%);
+    border: 1px solid rgba($primary-color, 0.25) !important;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      border-color: rgba($primary-color, 0.35) !important;
+    }
   }
 }
 
@@ -14,35 +24,30 @@ div[data-pc-name='deferredcontent'] {
   padding-top: 150px;
 }
 
-#footer {
-  div[data-pc-name='deferredcontent'] {
-    margin-top: -400px;
-    padding-top: 400px;
-  }
-}
 
-#start {
-  scroll-margin-top: 350px;
-  padding-bottom: 100px;
-
-  @media (min-width: $md) {
-    padding-bottom: 150px;
+body:has(#home) {
+  .p-toast-message {
+    top: 6rem !important;
   }
 
-  @media (min-width: $lg) {
-    padding-bottom: 230px;
+  .p-dialog-mask {
+    backdrop-filter: blur(0.5em);
+    z-index: 9999 !important;
+    
+    .p-dialog {
+      width: 95vw !important;
+      max-width: 500px !important;
+      background: rgb(0 0 0 / 50%) !important;
+      border: none !important;
+      padding: 0 !important;
+
+      .p-dialog-content {
+        padding: 0 !important;
+
+        .p-card {
+          border: 1px solid rgba($primary-color, 0.25) !important;
+        }
+      }
+    }
   }
-}
-
-#features {
-  overflow-x: hidden;
-  scroll-margin-top: 50px;
-
-  @media (min-width: $md) {
-    top: 160px;
-  }
-}
-
-#why-us {
-  scroll-margin-top: 150px;
 }
