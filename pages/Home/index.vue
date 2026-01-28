@@ -1,32 +1,53 @@
 <template>
   <div class="home-container">
     <nuc-start />
-    <nuc-results />
-    <nuc-features />
-    <nuc-section-faq site="home" />
-    <nuc-section-contact />
+    
+    <LazyNucResults />
+    <LazyNucFeatures />
+    <LazyNucSectionFaq site="home" />
+    <LazyNucSectionContact />
   </div>
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount, onMounted } from 'vue'
+import { NucStart } from './sections'
 
-import { NucFeatures, NucResults, NucStart } from './sections'
-
-onBeforeMount(() => window.scrollTo(0, 0))
+const LazyNucResults = defineAsyncComponent(() => 
+  import('./sections/Results/index.vue')
+)
+const LazyNucFeatures = defineAsyncComponent(() => 
+  import('./sections/Features/index.vue')
+)
+const LazyNucSectionFaq = defineAsyncComponent(() => 
+  import('../../../nuc_sections/components/faq/index.vue')
+)
+const LazyNucSectionContact = defineAsyncComponent(() => 
+  import('../../../nuc_sections/components/contact/index.vue')
+)
 
 onMounted(() => {
-  setTimeout(async () => {
-    try {
-      const { useDocumentation } = await import('atomic')
-      const doc = useDocumentation()
-
-      await doc.prefetchFirstPage()
-
-      await doc.prefetchAll()
-    } catch (error) {
-      console.error('Failed to prefetch documentation:', error)
-    }
-  }, 1000)
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(async () => {
+      try {
+        const { useDocumentation } = await import('atomic')
+        const doc = useDocumentation()
+        await doc.prefetchFirstPage()
+        await doc.prefetchAll()
+      } catch (error) {
+        console.error('Failed to prefetch documentation:', error)
+      }
+    })
+  } else {
+    setTimeout(async () => {
+      try {
+        const { useDocumentation } = await import('atomic')
+        const doc = useDocumentation()
+        await doc.prefetchFirstPage()
+        await doc.prefetchAll()
+      } catch (error) {
+        console.error('Failed to prefetch documentation:', error)
+      }
+    }, 2000)
+  }
 })
 </script>
