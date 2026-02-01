@@ -83,7 +83,7 @@
   .results-heading {
     font-family: $font-inter-sans-serif;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: $white-text-color;
     line-height: 1.2;
     margin: 0;
@@ -91,6 +91,7 @@
     .highlight {
       font-family: $font-inter-sans-serif;
       font-size: 1.75rem;
+      color: transparent;
       background: linear-gradient(135deg, $primary-color, $primary-white-green-text-color);
       background-clip: text;
     }
@@ -280,6 +281,9 @@
   }
 
   .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem 2.5rem !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
