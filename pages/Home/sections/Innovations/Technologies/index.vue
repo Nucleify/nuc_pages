@@ -19,12 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  bounceFadeIn,
-  isMobile,
-  technologyRequests,
-  useScrollTrigger,
-} from 'atomic'
+import { isMobile, technologyRequests } from 'atomic'
 
 const { getSiteTechnologies, resultsBySite } = technologyRequests()
 
@@ -43,19 +38,4 @@ useSwiper(technologiesSwiper, {
   slidesPerGroup: 2,
   loop: true,
 })
-
-useScrollTrigger(
-  '.swiper-container',
-  () => {
-    bounceFadeIn('.swiper-container swiper-slide', {
-      delay: 0,
-      duration: 0.4,
-      stagger: 0.1,
-      ease: 'power2.out',
-    })
-  },
-  {
-    start: 'top 75%',
-  }
-)
 </script>

@@ -6,7 +6,6 @@ export const officeRoutes = {
     'files',
     'settings',
     'structural',
-    'tasks',
   ],
   front: ['home'],
 }
