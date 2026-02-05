@@ -344,44 +344,6 @@
     }
   }
 
-  .trust-strip {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 1210px;
-  }
-
-  .trust-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-    background: rgba($primary-color, 0.03);
-    border: 1px solid rgba($primary-color, 0.1);
-    border-radius: 10px;
-    color: rgba($white-text-color, 0.7);
-    font-size: $font-size-sm;
-    font-weight: 500;
-    transition: all 0.3s ease;
-
-    .iconify {
-      font-size: 1.1rem;
-      color: $primary-color;
-    }
-
-    &:hover {
-      color: $white-text-color;
-      background: rgba($primary-color, 0.06);
-      border-color: rgba($primary-color, 0.15);
-    }
-  }
-
-  .trust-divider {
-    display: none;
-  }
 
   @media (min-width: $sm) {
     .results-heading {
@@ -474,33 +436,6 @@
 
     .cta-text {
       text-align: left;
-    }
-
-    .trust-strip {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem 2rem;
-      background: rgba($primary-color, 0.03);
-      border: 1px solid rgba($primary-color, 0.1);
-      border-radius: 100px;
-    }
-
-    .trust-badge {
-      padding: 0;
-      background: transparent;
-      border: none;
-      border-radius: 0;
-
-      &:hover {
-        background: transparent;
-        border-color: transparent;
-      }
-    }
-
-    .trust-divider {
-      display: block;
     }
   }
 

@@ -60,22 +60,7 @@
         <nuc-section-email-us @success="showDialog = false" />
       </Dialog>
       
-      <div class="trust-strip">
-        <div class="trust-badge">
-          <Icon name="mdi:shield-check" />
-          <span>Money-Back Guarantee</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-badge">
-          <Icon name="mdi:credit-card-off-outline" />
-          <span>No Upfront Payment</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-badge">
-          <Icon name="mdi:infinity" />
-          <span>Free Revisions</span>
-        </div>
-      </div>
+      <nuc-trust-badges :items="trustItems" />
     </div>
   </section>
 </template>
@@ -84,6 +69,12 @@
 import { ref } from 'vue'
 
 const showDialog = ref(false)
+
+const trustItems = [
+  { icon: 'mdi:shield-check', label: 'Money-Back Guarantee' },
+  { icon: 'mdi:credit-card-off-outline', label: 'No Upfront Payment' },
+  { icon: 'mdi:infinity', label: 'Free Revisions' },
+]
 
 interface Benefit {
   title: string
