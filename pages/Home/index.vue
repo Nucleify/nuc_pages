@@ -2,6 +2,7 @@
   <div class="home-container">
     <nuc-start />
     <LazyNucResults />
+    <nuc-section-pricing />
     <LazyNucFeatures />
     <LazyNucSectionFaq site="home" />
     <LazyNucSectionContact />

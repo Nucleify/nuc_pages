@@ -8,7 +8,7 @@
           <span>WHAT YOU GET</span>
         </span>
         <h2 class="results-heading">
-          Everything you need to<br>
+          Everything you need to
           <span class="highlight">launch and grow online.</span>
         </h2>
         <p class="results-description">
@@ -60,35 +60,20 @@
         <nuc-section-email-us @success="showDialog = false" />
       </Dialog>
       
-      <div class="trust-section">
-        <div class="trust-badges">
-          <div class="trust-item">
-            <div class="trust-icon-wrapper">
-              <Icon name="mdi:shield-check" />
-            </div>
-            <div class="trust-content">
-              <span class="trust-title">Money-Back Guarantee</span>
-              <span class="trust-desc">Not happy? Full refund, no questions</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon-wrapper">
-              <Icon name="mdi:credit-card-off-outline" />
-            </div>
-            <div class="trust-content">
-              <span class="trust-title">No Upfront Payment</span>
-              <span class="trust-desc">Pay only when you're satisfied</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon-wrapper">
-              <Icon name="mdi:infinity" />
-            </div>
-            <div class="trust-content">
-              <span class="trust-title">Free Revisions</span>
-              <span class="trust-desc">Until it's exactly what you want</span>
-            </div>
-          </div>
+      <div class="trust-strip">
+        <div class="trust-badge">
+          <Icon name="mdi:shield-check" />
+          <span>Money-Back Guarantee</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-badge">
+          <Icon name="mdi:credit-card-off-outline" />
+          <span>No Upfront Payment</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-badge">
+          <Icon name="mdi:infinity" />
+          <span>Free Revisions</span>
         </div>
       </div>
     </div>
