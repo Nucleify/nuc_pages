@@ -1,2 +1,3 @@
 export * from './Errors'
 export * from './Home'
+export * from './Offer'

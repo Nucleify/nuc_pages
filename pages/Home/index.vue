@@ -2,7 +2,7 @@
   <div class="home-container">
     <nuc-start />
     <LazyNucResults />
-    <nuc-section-pricing />
+    <LazyNucSectionPricing />
     <LazyNucFeatures />
     <LazyNucSectionFaq site="home" />
     <LazyNucSectionContact />
@@ -16,6 +16,9 @@ import { NucStart } from './sections'
 
 const LazyNucResults = defineAsyncComponent(
   () => import('./sections/Results/index.vue')
+)
+const LazyNucSectionPricing = defineAsyncComponent(
+  () => import('../../../nuc_pricings/components/pricing/index.vue')
 )
 const LazyNucFeatures = defineAsyncComponent(
   () => import('./sections/Features/index.vue')
