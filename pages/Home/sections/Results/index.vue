@@ -3,10 +3,7 @@
     <div class="results-glow"></div>
     <div class="results-container container">
       <div class="results-header">
-        <span class="results-badge">
-          <Icon name="mdi:gift-outline" />
-          <span>WHAT YOU GET</span>
-        </span>
+        <nuc-shiny-badge icon="mdi:gift-outline" label="WHAT YOU GET" />
         <h2 class="results-heading">
           Everything you need to
           <span class="highlight">launch and grow online.</span>
@@ -41,35 +38,17 @@
                 <p>Free consultation, no strings attached. Let's talk about your project.</p>
               </div>
             </div>
-            <ad-button
-              label="GET FREE QUOTE →"
-              class="cta-button"
-              @click="showDialog = true"
-            />
+            <nuc-section-email-us-dialog button-class="cta-button" />
           </div>
         </div>
       </div>
 
-      <Dialog
-        v-model:visible="showDialog"
-        :modal="true"
-        :dismissable-mask="true"
-        :draggable="false"
-        :show-header="false"
-      >
-        <nuc-section-email-us @success="showDialog = false" />
-      </Dialog>
-      
       <nuc-trust-badges :items="trustItems" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const showDialog = ref(false)
-
 const trustItems = [
   { icon: 'mdi:shield-check', label: 'Money-Back Guarantee' },
   { icon: 'mdi:credit-card-off-outline', label: 'No Upfront Payment' },
