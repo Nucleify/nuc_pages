@@ -1,5 +1,6 @@
 <template>
   <section id="start">
+    <nuc-grid-background />
     <div class="container start-container">
       <div class="start-left">
         <span class="start-badge">LAUNCH WEBSITE UNDER A WEEK</span>

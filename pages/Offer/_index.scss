@@ -2,7 +2,8 @@
 
 .offer-container {
   min-height: 100vh;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
+  overflow: hidden;
 
   @media (min-width: $lg) {
     padding: 3.5rem 0;
@@ -19,232 +20,299 @@
   }
 }
 
-// Hero Section
 .offer-hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.offer-hero-glow {
-  position: absolute;
-  width: 900px;
-  height: 900px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba($primary-color, 0.22) 0%,
-    rgba($primary-color, 0.1) 35%,
-    rgba($primary-color, 0.03) 55%,
-    transparent 70%
-  );
-  pointer-events: none;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: glow-pulse 6s ease-in-out infinite;
-  filter: blur(30px);
-}
-
-.offer-hero-glow-secondary {
-  width: 650px;
-  height: 650px;
-  bottom: auto;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba($primary-color, 0.15) 0%,
-    rgba($primary-color, 0.06) 45%,
-    transparent 70%
-  );
-  animation: glow-pulse-alt 8s ease-in-out infinite;
-  filter: blur(40px);
-}
-
-@keyframes glow-pulse {
-  0%, 100% {
-    opacity: 0.9;
-    transform: translate(-50%, -50%) scale(1);
+  @media (min-width: $lg) {
+    min-height: calc(100vh - 5rem);
   }
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.15);
+
+  &-floating {
+    position: absolute;
+    z-index: 2;
+    display: none;
+
+    @media (min-width: $lg) {
+      display: block;
+    }
+
+    &-left {
+      left: 10%;
+      top: 35%;
+      animation: offer-float-left 4s ease-in-out infinite;
+    }
+
+    &-right {
+      right: 10%;
+      top: 45%;
+      animation: offer-float-right 4.5s ease-in-out infinite;
+    }
+  }
+
+  &-decoration {
+    position: absolute;
+    color: rgba($primary-color, 0.15);
+    pointer-events: none;
+    display: none;
+
+    @media (min-width: $md) {
+      display: block;
+    }
+
+    .iconify {
+      font-size: 3rem;
+    }
+
+    &-1 {
+      top: 20%;
+      left: 15%;
+      animation: offer-spin-slow 20s linear infinite;
+
+      .iconify {
+        font-size: 4rem;
+      }
+    }
+
+    &-3 {
+      top: 30%;
+      right: 12%;
+      animation: offer-spin-slow-reverse 25s linear infinite;
+
+      .iconify {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    max-width: 900px;
+  }
+
+  &-title {
+    font-family: $font-inter-sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $white-text-color;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.02em;
+
+    @media (min-width: $sm) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: $md) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 4rem;
+    }
+
+    &-highlight {
+      display: block;
+      font-size: 3rem;
+      font-weight: 800;
+      font-style: italic;
+      color: transparent;
+      background: linear-gradient(
+        135deg,
+        $primary-color 0%,
+        color.adjust($primary-color, $lightness: 15%) 50%,
+        $primary-white-green-text-color 100%
+      );
+      background-clip: text;
+      margin-top: 0.25rem;
+      animation: offer-gradient-shift 5s ease infinite;
+      background-size: 200% 200%;
+
+      @media (min-width: $sm) {
+        font-size: 3.5rem;
+      }
+
+      @media (min-width: $md) {
+        font-size: 4.25rem;
+      }
+
+      @media (min-width: $lg) {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba($white-text-color, 0.7);
+    margin: 0;
+    max-width: 600px;
+
+    strong {
+      color: $primary-color;
+      font-weight: 600;
+    }
+
+    @media (min-width: $md) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &-cta {
+    margin-top: 0.5rem;
+  }
+
+  &-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    background: linear-gradient(135deg, $primary-color, color.adjust($primary-color, $lightness: -5%));
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px rgba($primary-color, 0.4);
+
+    .iconify {
+      font-size: 1.2rem;
+      animation: offer-bounce-arrow 1.5s ease-in-out infinite;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba($primary-color, 0.5);
+      background: linear-gradient(135deg, color.adjust($primary-color, $lightness: 5%), $primary-color);
+    }
+  }
+
+  &-scroll-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba($primary-color, 0.5);
+    font-size: 1.5rem;
+    animation: offer-scroll-bounce 2s ease-in-out infinite;
+    padding: 2rem;
   }
 }
 
-@keyframes glow-pulse-alt {
-  0%, 100% {
-    opacity: 0.7;
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  }
-  50% {
-    opacity: 0.95;
-    transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
-  }
-}
-
-.offer-hero-content {
-  position: relative;
-  z-index: 1;
+.offer-floating-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 2rem;
-  max-width: 900px;
-  animation: fade-in-up 0.8s ease-out;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem;
+  background: rgba($primary-color, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($primary-color, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 30%);
+
+  .iconify {
+    font-size: 1.5rem;
+    color: $primary-color;
+  }
+
+  &-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: $white-text-color;
+    line-height: 1;
+  }
+
+  &-label {
+    font-size: 0.75rem;
+    color: rgba($white-text-color, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }
 
-@keyframes fade-in-up {
+@keyframes offer-float-left {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+}
+
+@keyframes offer-float-right {
+  0%, 100% {
+    transform: translateY(0) rotate(3deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+}
+
+@keyframes offer-spin-slow {
   from {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: rotate(0deg);
   }
+
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: rotate(360deg);
   }
 }
 
-.offer-hero-title {
-  font-family: $font-inter-sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: $white-text-color;
-  line-height: 1.2;
-  margin: 0;
-  letter-spacing: -0.02em;
-
-  @media (min-width: $sm) {
-    font-size: 3rem;
+@keyframes offer-spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
   }
 
-  @media (min-width: $md) {
-    font-size: 3.5rem;
-  }
-
-  @media (min-width: $lg) {
-    font-size: 4rem;
+  to {
+    transform: rotate(0deg);
   }
 }
 
-.offer-hero-title-highlight {
-  display: block;
-  font-size: 3rem;
-  font-weight: 800;
-  font-style: italic;
-  color: transparent;
-  background: linear-gradient(
-    135deg,
-    $primary-color 0%,
-    color.adjust($primary-color, $lightness: 15%) 50%,
-    $primary-white-green-text-color 100%
-  );
-  background-clip: text;
-  margin-top: 0.25rem;
-  animation: gradient-shift 5s ease infinite;
-  background-size: 200% 200%;
-
-  @media (min-width: $sm) {
-    font-size: 3.5rem;
-  }
-
-  @media (min-width: $md) {
-    font-size: 4.25rem;
-  }
-
-  @media (min-width: $lg) {
-    font-size: 5rem;
-  }
-}
-
-@keyframes gradient-shift {
+@keyframes offer-gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
 }
 
-.offer-hero-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: rgba($white-text-color, 0.7);
-  margin: 0;
-  max-width: 600px;
-
-  strong {
-    color: $primary-color;
-    font-weight: 600;
-  }
-
-  @media (min-width: $md) {
-    font-size: 1.25rem;
-  }
-}
-
-.offer-hero-cta {
-  margin-top: 1rem;
-}
-
-.offer-hero-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000;
-  background: linear-gradient(135deg, $primary-color, color.adjust($primary-color, $lightness: -5%));
-  border: none;
-  border-radius: 12px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 24px rgba($primary-color, 0.4);
-
-  .iconify {
-    font-size: 1.2rem;
-    animation: bounce-arrow 1.5s ease-in-out infinite;
-  }
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba($primary-color, 0.5);
-    background: linear-gradient(135deg, color.adjust($primary-color, $lightness: 5%), $primary-color);
-  }
-}
-
-@keyframes bounce-arrow {
+@keyframes offer-bounce-arrow {
   0%, 100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(4px);
   }
 }
 
-.offer-hero-scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba($primary-color, 0.5);
-  font-size: 1.5rem;
-  animation: scroll-bounce 2s ease-in-out infinite;
-}
-
-@keyframes scroll-bounce {
+@keyframes offer-scroll-bounce {
   0%, 100% {
     transform: translateX(-50%) translateY(0);
     opacity: 0.5;
   }
+
   50% {
     transform: translateX(-50%) translateY(10px);
     opacity: 1;
   }
 }
+

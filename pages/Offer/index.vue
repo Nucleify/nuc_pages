@@ -1,9 +1,31 @@
 <template>
   <div class="offer-container">
     <section class="offer-hero">
-      <div class="offer-hero-glow"></div>
-      <div class="offer-hero-glow offer-hero-glow-secondary"></div>
-      
+      <nuc-grid-background />
+
+      <div class="offer-hero-floating offer-hero-floating-left">
+        <div class="offer-floating-stat">
+          <Icon name="mdi:lightning-bolt" />
+          <span class="offer-floating-stat-value">5 days</span>
+          <span class="offer-floating-stat-label">Average Delivery</span>
+        </div>
+      </div>
+
+      <div class="offer-hero-floating offer-hero-floating-right">
+        <div class="offer-floating-stat">
+          <Icon name="mdi:star" />
+          <span class="offer-floating-stat-value">99%</span>
+          <span class="offer-floating-stat-label">Client Satisfaction</span>
+        </div>
+      </div>
+
+      <div class="offer-hero-decoration offer-hero-decoration-1">
+        <Icon name="mdi:hexagon-outline" />
+      </div>
+      <div class="offer-hero-decoration offer-hero-decoration-3">
+        <Icon name="mdi:triangle-outline" />
+      </div>
+
       <div class="offer-hero-content container">
         <nuc-shiny-badge icon="mdi:rocket-launch" label="FLEXIBLE PRICING" />
 
@@ -27,9 +49,9 @@
         </div>
       </div>
 
-      <div class="offer-hero-scroll-indicator">
+      <a href="#pricing" class="offer-hero-scroll-indicator">
         <Icon name="mdi:chevron-double-down" />
-      </div>
+      </a>
     </section>
 
     <LazyNucSectionPricing />
@@ -60,4 +82,3 @@ const LazyNucSectionContact = defineAsyncComponent(
   () => import('../../../nuc_sections/components/contact/index.vue')
 )
 </script>
-
