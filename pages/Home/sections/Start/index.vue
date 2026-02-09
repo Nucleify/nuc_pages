@@ -3,15 +3,14 @@
     <nuc-grid-background />
     <div class="container start-container">
       <div class="start-left">
-        <span class="start-badge">LAUNCH WEBSITE UNDER A WEEK</span>
+        <span class="start-badge">{{ $t('home-badge') }}</span>
         
         <h1 class="start-heading">
-          Build Your Online Presence That Converts Visitors Into Clients
+          {{ $t('home-header') }}
         </h1>
         
         <p class="start-description">
-          A clear, fast website designed to get real people to contact you. 
-          We follow you step by step and put something serious online that truly represents your business.
+          {{ $t('home-description') }}
         </p>
 
         <div class="start-features">
@@ -20,8 +19,8 @@
               <Icon name="mdi:currency-usd" />
             </div>
             <div class="feature-content">
-              <span>Save time & money</span>
-              <p>cut development costs with ready-to-use solutions</p>
+              <span>{{ $t('home-feature-save-title') }}</span>
+              <p>{{ $t('home-feature-save-desc') }}</p>
             </div>
           </div>
           
@@ -30,8 +29,8 @@
               <Icon name="mdi:lightning-bolt" />
             </div>
             <div class="feature-content">
-              <span>Lightning-fast performance</span>
-              <p>optimized for speed, SEO, and user experience</p>
+              <span>{{ $t('home-feature-fast-title') }}</span>
+              <p>{{ $t('home-feature-fast-desc') }}</p>
             </div>
           </div>
 
@@ -40,19 +39,19 @@
               <Icon name="mdi:shield-check" />
             </div>
             <div class="feature-content">
-              <span>Secure & reliable</span>
-              <p>your data is safe, your site always online</p>
+              <span>{{ $t('home-feature-secure-title') }}</span>
+              <p>{{ $t('home-feature-secure-desc') }}</p>
             </div>
           </div>
         </div>
 
         <p class="start-note">
-          Ready to accelerate your project? Let's build something extraordinary together!
+          {{ $t('home-note') }}
         </p>
 
         <div class="start-social-proof">
           <Icon name="mdi:rocket-launch-outline" />
-          <span>Start growing your business online today</span>
+          <span>{{ $t('home-social-proof') }}</span>
         </div>
       </div>
 
