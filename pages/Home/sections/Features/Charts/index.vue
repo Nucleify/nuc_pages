@@ -1,10 +1,10 @@
 <template>
   <NucFeatureTemplate
     section-id="charts"
-    badge="DATA VISUALIZATION"
-    heading-prefix="Track your business with"
-    heading-highlight="interactive charts"
-    :description="description"
+    :badge="$t('features-charts-badge')"
+    :heading-prefix="$t('features-charts-heading-prefix')"
+    :heading-highlight="$t('features-charts-heading-highlight')"
+    :description="$t('features-charts-description')"
     :features="features"
     visual-position="right"
   >
@@ -25,17 +25,18 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 import { isMobile } from 'atomic'
 
 import type { FeatureItemInterface } from '../Template'
 import { NucFeatureTemplate } from '../Template'
 
-const description =
-  "Built-in analytics dashboard with bar, line, pie charts and more. See what's working and make data-driven decisions."
+const { t } = useI18n()
 
 const features: FeatureItemInterface[] = [
-  { icon: 'mdi:chart-bar', label: 'Multiple chart types' },
-  { icon: 'mdi:refresh', label: 'Real-time updates' },
-  { icon: 'mdi:download', label: 'Export to PDF/Excel' },
+  { icon: 'mdi:chart-bar', label: t('features-charts-feat-types') },
+  { icon: 'mdi:refresh', label: t('features-charts-feat-realtime') },
+  { icon: 'mdi:download', label: t('features-charts-feat-export') },
 ]
 </script>

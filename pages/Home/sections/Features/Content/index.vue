@@ -1,10 +1,10 @@
 <template>
   <NucFeatureTemplate
     section-id="content-management"
-    badge="CONTENT MANAGEMENT"
-    heading-prefix="Update your website"
-    heading-highlight="without any code"
-    :description="description"
+    :badge="$t('features-content-badge')"
+    :heading-prefix="$t('features-content-heading-prefix')"
+    :heading-highlight="$t('features-content-heading-highlight')"
+    :description="$t('features-content-description')"
     :features="features"
     visual-position="left"
   >
@@ -38,15 +38,19 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 import type { FeatureItemInterface } from '../Template'
 import { NucFeatureTemplate } from '../Template'
 
-const description =
-  "Simple admin panel lets you edit text, swap images, and publish changes instantly. No developer needed - you're in full control."
+const { t } = useI18n()
 
 const features: FeatureItemInterface[] = [
-  { icon: 'mdi:pencil-outline', label: 'Edit text directly' },
-  { icon: 'mdi:image-plus-outline', label: 'Drag & drop images' },
-  { icon: 'mdi:rocket-launch-outline', label: 'Publish in one click' },
+  { icon: 'mdi:pencil-outline', label: t('features-content-feat-edit') },
+  { icon: 'mdi:image-plus-outline', label: t('features-content-feat-images') },
+  {
+    icon: 'mdi:rocket-launch-outline',
+    label: t('features-content-feat-publish'),
+  },
 ]
 </script>

@@ -1,10 +1,10 @@
 <template>
   <NucFeatureTemplate
     section-id="conversion"
-    badge="CONVERSION OPTIMIZED"
-    heading-prefix="Turn visitors into"
-    heading-highlight="paying customers"
-    :description="description"
+    :badge="$t('features-conversion-badge')"
+    :heading-prefix="$t('features-conversion-heading-prefix')"
+    :heading-highlight="$t('features-conversion-heading-highlight')"
+    :description="$t('features-conversion-description')"
     :features="features"
     visual-position="right"
   >
@@ -16,7 +16,7 @@
           </div>
           <div class="metric-info">
             <span class="metric-value">+47%</span>
-            <span class="metric-label">Click rate</span>
+            <span class="metric-label">{{ $t('features-conversion-metric-clicks') }}</span>
           </div>
         </div>
         <div class="metric-item">
@@ -25,7 +25,7 @@
           </div>
           <div class="metric-info">
             <span class="metric-value">+89%</span>
-            <span class="metric-label">Leads</span>
+            <span class="metric-label">{{ $t('features-conversion-metric-leads') }}</span>
           </div>
         </div>
         <div class="metric-item highlight-metric">
@@ -34,24 +34,24 @@
           </div>
           <div class="metric-info">
             <span class="metric-value">+62%</span>
-            <span class="metric-label">Revenue</span>
+            <span class="metric-label">{{ $t('features-conversion-metric-revenue') }}</span>
           </div>
         </div>
       </div>
       
       <div class="preview-cta-demo">
         <div class="cta-example">
-          <span class="cta-label">Before</span>
-          <div class="cta-button old">Learn More</div>
+          <span class="cta-label">{{ $t('features-conversion-before') }}</span>
+          <div class="cta-button old">{{ $t('features-conversion-old-cta') }}</div>
         </div>
         <div class="cta-arrow">
           <Icon name="mdi:arrow-right" />
         </div>
         <div class="cta-example">
-          <span class="cta-label">After</span>
+          <span class="cta-label">{{ $t('features-conversion-after') }}</span>
           <div class="cta-button new">
             <Icon name="mdi:rocket-launch" />
-            Start Free Trial
+            {{ $t('features-conversion-new-cta') }}
           </div>
         </div>
       </div>
@@ -60,15 +60,19 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 import type { FeatureItemInterface } from '../Template'
 import { NucFeatureTemplate } from '../Template'
 
-const description =
-  'Strategic design that guides users to take action. Every element is crafted to maximize engagement and drive conversions.'
+const { t } = useI18n()
 
 const features: FeatureItemInterface[] = [
-  { icon: 'mdi:cursor-default-click-outline', label: 'Click-optimized CTAs' },
-  { icon: 'mdi:target', label: 'Strategic placement' },
-  { icon: 'mdi:chart-line', label: 'Proven layouts' },
+  {
+    icon: 'mdi:cursor-default-click-outline',
+    label: t('features-conversion-feat-cta'),
+  },
+  { icon: 'mdi:target', label: t('features-conversion-feat-placement') },
+  { icon: 'mdi:chart-line', label: t('features-conversion-feat-layouts') },
 ]
 </script>

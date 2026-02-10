@@ -1,13 +1,11 @@
 <template>
   <div class="offer-container">
     <section class="offer-hero">
-      <nuc-grid-background />
-
       <div class="offer-hero-floating offer-hero-floating-left">
         <div class="offer-floating-stat">
           <Icon name="mdi:lightning-bolt" />
           <span class="offer-floating-stat-value">5 days</span>
-          <span class="offer-floating-stat-label">Average Delivery</span>
+          <span class="offer-floating-stat-label">{{ $t('offer-trust-delivery') }}</span>
         </div>
       </div>
 
@@ -15,7 +13,7 @@
         <div class="offer-floating-stat">
           <Icon name="mdi:star" />
           <span class="offer-floating-stat-value">99%</span>
-          <span class="offer-floating-stat-label">Client Satisfaction</span>
+          <span class="offer-floating-stat-label">{{ $t('offer-trust-consultation') }}</span>
         </div>
       </div>
 
@@ -27,16 +25,16 @@
       </div>
 
       <div class="offer-hero-content container">
-        <nuc-shiny-badge icon="mdi:rocket-launch" label="FLEXIBLE PRICING" />
+        <nuc-shiny-badge icon="mdi:rocket-launch" :label="$t('offer-badge')" />
 
         <h1 class="offer-hero-title">
-          Invest in Your
-          <span class="offer-hero-title-highlight">Digital Success</span>
+          {{ $t('offer-title') }}
+          <span class="offer-hero-title-highlight">{{ $t('offer-title-highlight') }}</span>
         </h1>
 
         <p class="offer-hero-subtitle">
-          From simple landing pages to enterprise platforms — choose the plan that fits your ambition.
-          <strong>No hidden fees. No surprises.</strong>
+          {{ $t('offer-subtitle') }}
+          <strong>{{ $t('offer-subtitle-strong') }}</strong>
         </p>
 
         <nuc-trust-badges :items="heroFeatures" />
@@ -44,7 +42,7 @@
         <div class="offer-hero-cta">
           <a href="#pricing" class="offer-hero-button">
             <Icon name="mdi:arrow-down" />
-            <span>See Plans</span>
+            <span>{{ $t('offer-see-plans') }}</span>
           </a>
         </div>
       </div>
@@ -63,13 +61,16 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { NucTrustBadgeItemInterface } from 'atomic'
 
+const { t } = useI18n()
+
 const heroFeatures: NucTrustBadgeItemInterface[] = [
-  { icon: 'mdi:shield-check', label: '30-Day Money Back' },
-  { icon: 'mdi:clock-fast', label: 'Fast Delivery' },
-  { icon: 'mdi:headset', label: 'Free Consultation' },
+  { icon: 'mdi:shield-check', label: t('offer-trust-moneyback') },
+  { icon: 'mdi:clock-fast', label: t('offer-trust-delivery') },
+  { icon: 'mdi:headset', label: t('offer-trust-consultation') },
 ]
 
 const LazyNucSectionPricing = defineAsyncComponent(

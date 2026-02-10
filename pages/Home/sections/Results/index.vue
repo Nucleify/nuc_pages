@@ -3,13 +3,13 @@
     <div class="results-glow"></div>
     <div class="results-container container">
       <div class="results-header">
-        <nuc-shiny-badge icon="mdi:gift-outline" label="WHAT YOU GET" />
+        <nuc-shiny-badge icon="mdi:gift-outline" :label="$t('results-badge')" />
         <h2 class="results-heading">
-          Everything you need to
-          <span class="highlight">launch and grow online.</span>
+          {{ $t('results-header') }}
+          <span class="highlight">{{ $t('results-header-highlight') }}</span>
         </h2>
         <p class="results-description">
-          No hidden fees. No complicated contracts. Just a website that works for your business.
+          {{ $t('results-description') }}
         </p>
       </div>
 
@@ -34,8 +34,8 @@
                 <Icon name="mdi:rocket-launch" class="cta-icon" />
               </div>
               <div class="cta-text">
-                <h3>Ready to get started?</h3>
-                <p>Free consultation, no strings attached. Let's talk about your project.</p>
+                <h3>{{ $t('results-cta-header') }}</h3>
+                <p>{{ $t('results-cta-description') }}</p>
               </div>
             </div>
             <nuc-section-email-us-dialog button-class="cta-button" />
@@ -49,10 +49,14 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 const trustItems = [
-  { icon: 'mdi:shield-check', label: 'Money-Back Guarantee' },
-  { icon: 'mdi:credit-card-off-outline', label: 'No Upfront Payment' },
-  { icon: 'mdi:infinity', label: 'Free Revisions' },
+  { icon: 'mdi:shield-check', label: t('results-trust-guarantee') },
+  { icon: 'mdi:credit-card-off-outline', label: t('results-trust-payment') },
+  { icon: 'mdi:infinity', label: t('results-trust-revisions') },
 ]
 
 interface Benefit {
@@ -63,23 +67,23 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    title: 'Stand Out',
-    desc: 'Look professional, build trust instantly',
+    title: t('results-benefit-standout-title'),
+    desc: t('results-benefit-standout-desc'),
     icon: 'mdi:trophy-outline',
   },
   {
-    title: 'Reach Everyone',
-    desc: 'Customers find you on any device',
+    title: t('results-benefit-reach-title'),
+    desc: t('results-benefit-reach-desc'),
     icon: 'mdi:account-group-outline',
   },
   {
-    title: 'Win Trust',
-    desc: 'Secure site that loads in a blink',
+    title: t('results-benefit-trust-title'),
+    desc: t('results-benefit-trust-desc'),
     icon: 'mdi:shield-check-outline',
   },
   {
-    title: 'Stay in Control',
-    desc: 'Update your site anytime, by yourself',
+    title: t('results-benefit-control-title'),
+    desc: t('results-benefit-control-desc'),
     icon: 'mdi:cursor-default-click-outline',
   },
 ]

@@ -9,14 +9,11 @@
         </div>
         <div class="description-container">
           <ad-heading :tag="3" class="title">
-            <div class="shiny">Atomic Design&nbsp;</div>
-            <span>Approach</span>
+            <div class="shiny">{{ $t('innovations-structure-title-highlight') }}&nbsp;</div>
+            <span>{{ $t('innovations-structure-title') }}</span>
           </ad-heading>
           <ad-paragraph
-            text="
-              Utilizing Atomic Design principles to develop dynamic, modular solutions that enhance
-              scalability and ensure seamless integration in your development processes.
-            "
+            :text="$t('innovations-structure-description')"
             class="description"
           />
         </div>

@@ -1,10 +1,10 @@
 <template>
   <NucFeatureTemplate
     section-id="performance"
-    badge="BLAZING FAST"
-    heading-prefix="Your website loads in"
-    heading-highlight="under 1 second"
-    :description="description"
+    :badge="$t('features-performance-badge')"
+    :heading-prefix="$t('features-performance-heading-prefix')"
+    :heading-highlight="$t('features-performance-heading-highlight')"
+    :description="$t('features-performance-description')"
     :features="features"
     visual-position="left"
   >
@@ -44,8 +44,12 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 import type { FeatureItemInterface } from '../Template'
 import { NucFeatureTemplate } from '../Template'
+
+const { t } = useI18n()
 
 interface Metric {
   id: string
@@ -53,20 +57,29 @@ interface Metric {
   score: number
 }
 
-const description =
-  'Optimized for speed from the ground up. Faster sites rank higher on Google and keep visitors engaged. Every millisecond counts.'
-
 const features: FeatureItemInterface[] = [
-  { icon: 'mdi:server-network', label: 'Global CDN' },
-  { icon: 'mdi:cached', label: 'Smart caching' },
-  { icon: 'mdi:cellphone-check', label: 'Mobile optimized' },
+  { icon: 'mdi:server-network', label: t('features-performance-feat-cdn') },
+  { icon: 'mdi:cached', label: t('features-performance-feat-cache') },
+  { icon: 'mdi:cellphone-check', label: t('features-performance-feat-mobile') },
 ]
 
 const metrics: Metric[] = [
-  { id: 'performance', label: 'Performance', score: 97 },
-  { id: 'accessibility', label: 'Accessibility', score: 100 },
-  { id: 'best-practices', label: 'Best Practices', score: 100 },
-  { id: 'seo', label: 'SEO', score: 100 },
+  {
+    id: 'performance',
+    label: t('features-performance-metric-perf'),
+    score: 97,
+  },
+  {
+    id: 'accessibility',
+    label: t('features-performance-metric-a11y'),
+    score: 100,
+  },
+  {
+    id: 'best-practices',
+    label: t('features-performance-metric-bp'),
+    score: 100,
+  },
+  { id: 'seo', label: t('features-performance-metric-seo'), score: 100 },
 ]
 
 function getScoreColor(score: number): string {
