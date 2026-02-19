@@ -281,27 +281,8 @@
   }
 
   .cta-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 1rem 2.5rem !important;
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    color: #000 !important;
-    box-shadow: 0 4px 24px rgba($primary-color, 0.4);
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba($primary-color, 0.5);
-      background: color.adjust($primary-color, $lightness: 5%) !important;
-    }
-
-    .iconify {
-      color: #000 !important;
-    }
   }
-
 
   @media (min-width: $sm) {
     .results-heading {
