@@ -1,11 +1,13 @@
 <template>
   <div class="home-container">
     <nuc-start />
-    <LazyNucResults />
-    <LazyNucSectionPricing />
-    <LazyNucFeatures />
     <LazyNucSectionFaq site="home" />
+    <LazyNucResults />
+    <LazyNucFeatures />
     <LazyNucSectionContact />
+    <div class="home-hexagons">
+      <nuc-animation-hexagons />
+    </div>
   </div>
 </template>
 
@@ -16,9 +18,6 @@ import { NucStart } from './sections'
 
 const LazyNucResults = defineAsyncComponent(
   () => import('./sections/Results/index.vue')
-)
-const LazyNucSectionPricing = defineAsyncComponent(
-  () => import('../../../nuc_pricings/components/pricing/index.vue')
 )
 const LazyNucFeatures = defineAsyncComponent(
   () => import('./sections/Features/index.vue')
@@ -42,13 +41,12 @@ onMounted(() => {
     }
   }
 
-  // Only prefetch after 10 seconds of idle time
   if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => setTimeout(prefetchDocs, 10000), {
-      timeout: 15000,
+    requestIdleCallback(() => setTimeout(prefetchDocs, 5000), {
+      timeout: 5000,
     })
   } else {
-    setTimeout(prefetchDocs, 15000)
+    setTimeout(prefetchDocs, 5000)
   }
 })
 </script>
