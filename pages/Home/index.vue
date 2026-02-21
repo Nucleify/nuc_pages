@@ -1,8 +1,8 @@
 <template>
   <div class="home-container">
     <nuc-start />
-    <LazyNucSectionFaq site="home" />
     <LazyNucResults />
+    <LazyNucSectionFaq site="home" />
     <LazyNucFeatures />
     <LazyNucSectionContact />
     <div class="home-hexagons">
