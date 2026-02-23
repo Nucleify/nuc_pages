@@ -1,3 +1,4 @@
+export * from './Company'
 export * from './Errors'
 export * from './Home'
 export * from './Offer'

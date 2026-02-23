@@ -1,0 +1,430 @@
+@use 'sass:color';
+
+#about-us #values {
+  padding: 5rem 0;
+
+  @media (min-width: $md) {
+    padding: 7rem 0;
+  }
+
+  .about-values-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1210px;
+    margin: 0 auto;
+  }
+
+  .about-values-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    max-width: 700px;
+  }
+
+  .about-values-heading {
+    font-family: $font-inter-sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $white-text-color;
+    line-height: 1.3;
+    margin: 0;
+
+    .highlight {
+      display: block;
+      font-family: $font-inter-sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      font-style: italic;
+      color: transparent;
+      background: linear-gradient(135deg, $primary-color 0%, $primary-white-green-text-color 100%);
+      background-clip: text;
+      margin-top: 0.25rem;
+    }
+
+    @media (min-width: $sm) {
+      font-size: 2rem;
+
+      .highlight {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: $md) {
+      font-size: 2.5rem;
+
+      .highlight {
+        font-size: 3.25rem;
+      }
+    }
+  }
+
+  .about-values-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba($white-text-color, 0.7);
+    margin: 0;
+
+    @media (min-width: $md) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .about-values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+
+    @media (min-width: $sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .about-value-card {
+    position: relative;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, rgba($primary-color, 0.03) 0%, transparent 100%);
+    border: 1px solid rgba($primary-color, 0.12);
+    border-radius: 16px;
+    transition: all 0.35s ease;
+    overflow: hidden;
+
+    &:hover {
+      transform: scale(1.02);
+      border-color: rgba($primary-color, 0.28);
+      box-shadow: 0 12px 40px rgba($primary-color, 0.1);
+
+      .about-value-card-icon {
+        transform: scale(1.1);
+      }
+    }
+
+    &--featured {
+      border-color: rgba($primary-color, 0.25);
+      background: linear-gradient(135deg, rgba($primary-color, 0.06) 0%, rgba($primary-color, 0.02) 100%);
+    }
+  }
+
+  .about-value-card-number {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba($primary-color, 0.25);
+    letter-spacing: 0.05em;
+  }
+
+  .about-value-card-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($primary-color, 0.08);
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    transition: all 0.3s ease;
+
+    .iconify {
+      font-size: 1.3rem;
+      color: $primary-color;
+    }
+  }
+
+  .about-value-card-title {
+    font-family: $font-inter-sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $white-text-color;
+    margin: 0 0 0.5rem;
+  }
+
+  .about-value-card-desc {
+    font-size: $font-size-sm;
+    line-height: 1.6;
+    color: rgba($white-text-color, 0.55);
+    margin: 0;
+  }
+
+  .about-values-process {
+    width: 100%;
+    max-width: 1210px;
+  }
+
+  .about-values-process-inner {
+    position: relative;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, rgba($primary-color, 0.05) 0%, rgba($primary-color, 0.01) 100%);
+    border: 1px solid rgba($primary-color, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, $primary-color, transparent);
+    }
+
+    @media (min-width: $md) {
+      padding: 3rem;
+    }
+  }
+
+  .about-values-process-title {
+    font-family: $font-inter-sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $white-text-color;
+    margin: 0 0 2rem;
+    text-align: center;
+
+    @media (min-width: $md) {
+      font-size: 1.4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .about-values-process-track {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      width: 4px;
+      height: 20px;
+      background: linear-gradient(180deg, transparent, rgba($primary-color, 0.65), transparent);
+      border-radius: 2px;
+      z-index: 1;
+      animation: process-shimmer-v 3s linear infinite;
+
+      @media (min-width: $md) {
+        display: none;
+      }
+    }
+  }
+
+  .about-values-process-line {
+    display: none;
+
+    @media (min-width: $md) {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      overflow: hidden;
+      background: linear-gradient(
+        90deg,
+        rgba($primary-color, 0.3),
+        rgba($primary-color, 0.15) 50%,
+        rgba($primary-color, 0.3)
+      );
+      z-index: 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        height: 6px;
+        top: -2px;
+        background: linear-gradient(
+          90deg,
+          rgba($primary-color, 0.1),
+          rgba($primary-color, 0.06) 50%,
+          rgba($primary-color, 0.1)
+        );
+        filter: blur(4px);
+      }
+
+      .about-values-process-line-shimmer {
+        position: absolute;
+        top: -1px;
+        width: 20%;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, rgba($primary-color, 0.6), transparent);
+        border-radius: 2px;
+        animation: process-shimmer-h 3s linear infinite;
+      }
+    }
+  }
+
+  .about-values-process-steps {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: $md) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .about-values-process-step {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.15rem;
+    padding: 0 0 2.25rem;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 19px;
+      bottom: -20px;
+      width: 2px;
+      background: rgba($primary-color, 0.25);
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $md) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 0.75rem;
+      gap: 0.75rem;
+
+      &:not(:last-child)::after {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .about-values-process-step-number {
+        border-color: rgba($primary-color, 0.7);
+        box-shadow: 0 0 20px rgba($primary-color, 0.3), 0 0 40px rgba($primary-color, 0.12);
+        background: rgba($primary-color, 0.18);
+      }
+
+      .about-values-process-step-icon {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  .about-values-process-step-number {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    background: rgba($primary-color, 0.1);
+    border: 2px solid rgba($primary-color, 0.4);
+    box-shadow: 0 0 12px rgba($primary-color, 0.15), 0 0 24px rgba($primary-color, 0.06);
+    transition: all 0.35s ease;
+
+    span {
+      font-size: $font-size-sm;
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
+
+  .about-values-process-step-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 0.35rem;
+
+    @media (min-width: $md) {
+      align-items: center;
+      padding-top: 0;
+    }
+  }
+
+  .about-values-process-step-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba($primary-color, 0.12) 0%, rgba($primary-color, 0.04) 100%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    margin-bottom: 0.15rem;
+
+    .iconify {
+      font-size: 1.3rem;
+      color: $primary-color;
+    }
+  }
+
+  .about-values-process-step-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: $white-text-color;
+  }
+
+  .about-values-process-step-desc {
+    font-size: $font-size-xs;
+    color: rgba($white-text-color, 0.5);
+    line-height: 1.4;
+  }
+}
+
+@keyframes process-shimmer-v {
+  0% {
+    top: 10px;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 1;
+  }
+
+  100% {
+    top: calc(100% - 5rem);
+    opacity: 0;
+  }
+}
+
+@keyframes process-shimmer-h {
+  0% {
+    left: -10%;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 90%;
+    opacity: 0;
+  }
+}
