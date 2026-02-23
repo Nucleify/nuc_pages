@@ -7,5 +7,5 @@ export const officeRoutes = {
     'settings',
     'structural',
   ],
-  front: ['about-us', 'home', 'offer'],
+  front: ['about-us', 'home', 'offer', 'process'],
 }
