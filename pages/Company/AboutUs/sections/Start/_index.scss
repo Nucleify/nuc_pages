@@ -201,22 +201,6 @@
       }
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-
-      span {
-        transition: color 0.3s ease;
-      }
-
-      &:hover {
-        span {
-          color: rgba($primary-color, 0.8);
-        }
-      }
-    }
-
     &-company {
       display: flex;
       align-items: center;
@@ -232,6 +216,20 @@
         font-size: 1.1rem;
         font-weight: 600;
         color: $white-text-color;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+
+      span {
+        transition: color 0.3s ease;
+      }
+
+      &:hover span {
+        color: rgba($primary-color, 0.8);
       }
     }
 
