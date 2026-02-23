@@ -5,9 +5,6 @@
     <LazyNucSectionFaq site="home" />
     <LazyNucFeatures />
     <LazyNucSectionContact />
-    <div class="home-hexagons">
-      <nuc-animation-hexagons />
-    </div>
   </div>
 </template>
 
