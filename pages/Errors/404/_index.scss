@@ -85,89 +85,10 @@
     opacity: 0;
     transform: translateY(20px);
     animation: error-404-fade-up 0.6s ease-out 0.7s forwards;
-  }
 
-  .error-404-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    max-width: 200px;
-
-    // Style for ad-label component
-    ad-label,
-    :deep(ad-label) {
-      opacity: 1 !important;
-      animation: none !important;
-      transform: none !important;
-      font-size: 1rem !important;
-      color: inherit !important;
-      font-weight: 600;
-    }
-
-    // Style for ad-icon component
-    ad-icon,
-    :deep(ad-icon) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease;
-    }
-
-    svg {
-      width: 20px;
-      height: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    &:hover svg,
-    &:hover ad-icon,
-    &:hover :deep(ad-icon) {
-      transform: translateX(-3px);
-    }
-
-    // Primary button - bright green with dark text (prominent)
-    &.error-404-button-primary {
-      background: linear-gradient(135deg, $primary-color, color.adjust($primary-color, $lightness: -5%));
-      color: #000;
-      box-shadow: 0 4px 24px rgba($primary-color, 0.4);
-
-      &:hover {
-        box-shadow: 0 8px 32px rgba($primary-color, 0.5);
-        background: linear-gradient(135deg, color.adjust($primary-color, $lightness: 5%), $primary-color);
-        transform: translateY(-2px);
-      }
-
-      &:active {
-        transform: translateY(0);
-      }
-    }
-
-    // Secondary button - dark green with light green text (less prominent)
-    &.error-404-button-secondary {
-      background: rgba($primary-color, 0.1);
-      border: 1px solid rgba($primary-color, 0.3);
-      color: $primary-color;
-      box-shadow: 0 0 0 0 transparent;
-
-      &:hover {
-        background: rgba($primary-color, 0.15);
-        border-color: rgba($primary-color, 0.5);
-        transform: translateY(-2px);
-      }
-
-      &:active {
-        transform: translateY(0);
-      }
+    .nuc-submit-button {
+      margin-top: 0;
+      min-width: 210px;
     }
   }
 }
