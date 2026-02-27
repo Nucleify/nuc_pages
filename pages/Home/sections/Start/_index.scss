@@ -1,7 +1,9 @@
-#start {
+#home #start {
   position: relative;
   min-height: 80vh;
   scroll-margin-top: 5rem;
+  background: $bg-dark-green-color;
+  margin: 0 -1rem;
 
   .start-container {
     display: flex;
@@ -9,7 +11,7 @@
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem;
 
     @media (min-width: $lg) {
       flex-direction: row;
@@ -26,7 +28,7 @@
 
   .start-badge {
     display: inline-block;
-    color: $white-text-color;
+    color: #fff;
     font-size: $font-size-xs;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -152,7 +154,7 @@
     }
 
     .feature-content {
-      h3 {
+      span {
         font-size: 1rem;
         font-weight: 700;
         color: $primary-white-green-text-color;
@@ -188,5 +190,47 @@
       width: 100%;
       max-width: 500px;
     }
+  }
+}
+
+html:not(.p-dark) #home #start {
+  background: linear-gradient(160deg, #0b2a1d 0%, #103828 35%, #0c2e20 65%, #081f16 100%);
+
+  .start-heading {
+    color: #f0f5f3;
+  }
+
+  .start-description {
+    color: rgba(#d1e8de, 0.85);
+  }
+
+  .feature-icon {
+    background: rgba(#34d399, 0.1);
+
+    &::before {
+      background: linear-gradient(to top, rgba(#34d399, 0.4), transparent);
+    }
+
+    .iconify {
+      color: #34d399;
+    }
+  }
+
+  .feature-content {
+    span {
+      color: #6ee7b7;
+    }
+
+    p {
+      color: rgba(#d1e8de, 0.7);
+    }
+  }
+
+  .start-note {
+    color: rgba(#d1e8de, 0.65);
+  }
+
+  .start-social-proof {
+    color: #34d399;
   }
 }

@@ -3,16 +3,10 @@
     <nuc-content />
     <nuc-conversion />
     <nuc-performance />
-    <ClientOnly>
-      <LazyNucCharts />
-    </ClientOnly>
+    <nuc-support />
   </section>
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
-
-import { NucContent, NucConversion, NucPerformance } from './'
-
-const LazyNucCharts = defineAsyncComponent(() => import('./Charts/index.vue'))
+import { NucContent, NucConversion, NucPerformance, NucSupport } from './'
 </script>

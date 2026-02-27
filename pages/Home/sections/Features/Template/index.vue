@@ -27,7 +27,6 @@
       <div class="feature-visual">
         <ad-card class="nuc-card-base feature-card">
           <template #content>
-            <nuc-animation-hexagons style="opacity: 0.5" />
             <slot />
           </template>
         </ad-card>

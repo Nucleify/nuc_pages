@@ -65,7 +65,7 @@
   .about-mission-description {
     font-size: 1rem;
     line-height: 1.7;
-    color: rgba($white-text-color, 0.7);
+    color: rgba($white-text-color-rgb, 0.7);
     margin: 0;
 
     @media (min-width: $md) {
@@ -89,7 +89,7 @@
     flex-direction: column;
     gap: 0.75rem;
     padding: 1.25rem;
-    background: rgba($white-text-color, 0.02);
+    background: rgba($white-text-color-rgb, 0.02);
     border: 1px solid rgba($primary-color, 0.1);
     border-left: 3px solid rgba($primary-color, 0.4);
     border-radius: 0 14px 14px 0;
@@ -153,7 +153,7 @@
 
   .about-mission-card-desc {
     font-size: $font-size-sm;
-    color: rgba($white-text-color, 0.6);
+    color: rgba($white-text-color-rgb, 0.6);
     margin: 0;
     line-height: 1.6;
   }
@@ -181,7 +181,7 @@
     p {
       font-size: 1rem;
       line-height: 1.8;
-      color: rgba($white-text-color, 0.6);
+      color: rgba($white-text-color-rgb, 0.6);
       margin: 0 0 1rem;
 
       &:last-child {

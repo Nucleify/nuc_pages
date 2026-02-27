@@ -46,7 +46,7 @@
 
   .speedometer-label {
     font-size: $font-size-xs;
-    color: rgba($white-text-color, 0.6);
+    color: rgba($white-text-color-rgb, 0.6);
     text-align: center;
   }
 
@@ -72,5 +72,15 @@
     .speedometer-value {
       font-size: 2rem;
     }
+  }
+}
+
+html:not(.p-dark) #performance {
+  .speedometer-label {
+    color: #4b7262;
+  }
+
+  .speedometer-value {
+    text-shadow: 0 0 12px rgba($primary-color, 0.35);
   }
 }

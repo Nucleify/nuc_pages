@@ -65,7 +65,7 @@
   .about-values-description {
     font-size: 1rem;
     line-height: 1.7;
-    color: rgba($white-text-color, 0.7);
+    color: rgba($white-text-color-rgb, 0.7);
     margin: 0;
 
     @media (min-width: $md) {
@@ -147,7 +147,7 @@
   .about-value-card-desc {
     font-size: $font-size-sm;
     line-height: 1.6;
-    color: rgba($white-text-color, 0.55);
+    color: rgba($white-text-color-rgb, 0.55);
     margin: 0;
   }
 

@@ -1,5 +1,6 @@
 <template>
   <section id="start">
+    <nuc-grid-background class="start-grid" />
     <div class="container start-container">
       <div class="start-left">
         <span class="start-badge">{{ $t('home-badge') }}</span>

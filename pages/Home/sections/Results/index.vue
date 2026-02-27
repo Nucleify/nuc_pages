@@ -27,7 +27,6 @@
 
       <div class="cta-section">
         <div class="cta-card">
-          <nuc-animation-hexagons style="opacity: 0.4" />
           <div class="cta-inner">
             <div class="cta-left">
               <div class="cta-icon-wrapper">

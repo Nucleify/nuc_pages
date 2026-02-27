@@ -154,7 +154,7 @@
   &-subtitle {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: rgba($white-text-color, 0.7);
+    color: rgba($white-text-color-rgb, 0.7);
     margin: 0;
     max-width: 600px;
 
@@ -238,7 +238,7 @@
 
   &-label {
     font-size: 0.75rem;
-    color: rgba($white-text-color, 0.6);
+    color: rgba($white-text-color-rgb, 0.6);
     text-transform: uppercase;
     letter-spacing: 1px;
   }

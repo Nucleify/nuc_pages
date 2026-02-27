@@ -19,7 +19,7 @@
             <path
               d="M 10 55 A 40 40 0 0 1 90 55"
               fill="none"
-              stroke="#0d4723"
+              :stroke="trackColor"
               stroke-width="8"
               stroke-linecap="round"
             />
@@ -44,12 +44,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import type { FeatureItemInterface } from '../Template'
 import { NucFeatureTemplate } from '../Template'
 
 const { t } = useI18n()
+const { isDark } = useDarkMode()
+const trackColor = computed(() => (isDark.value ? '#0d4723' : '#c6e0d4'))
 
 interface Metric {
   id: string
