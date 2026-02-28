@@ -7,5 +7,14 @@ export const officeRoutes = {
     'settings',
     'structural',
   ],
-  front: ['about-us', 'home', 'offer', 'process'],
+  front: [
+    'about-us',
+    'home',
+    'offer',
+    'process',
+    'cookies',
+    'gdpr',
+    'privacy-policy',
+    'terms-of-service',
+  ],
 }
