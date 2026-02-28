@@ -12,6 +12,7 @@ export const officeRoutes = {
     'home',
     'offer',
     'process',
+    'services',
     'cookies',
     'gdpr',
     'privacy-policy',
