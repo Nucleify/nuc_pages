@@ -9,6 +9,7 @@ export const officeRoutes = {
   ],
   front: [
     'about-us',
+    'dev',
     'home',
     'offer',
     'process',

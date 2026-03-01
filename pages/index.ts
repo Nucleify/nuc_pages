@@ -1,4 +1,5 @@
 export * from './Company'
+export * from './Dev'
 export * from './Errors'
 export * from './Home'
 export * from './Legal'

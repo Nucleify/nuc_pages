@@ -5,6 +5,7 @@ import {
   NucBusinessWebsitesPage,
   NucCookiesPage,
   NucCustomProjectsPage,
+  NucDevPage,
   NucEcommerceStoresPage,
   NucError404Page,
   NucGDPRPage,
@@ -23,6 +24,7 @@ export function registerNucPages(app: App<Element>): void {
   app
     // Core pages
     .component('nuc-home-page', NucHomePage)
+    .component('nuc-dev-page', NucDevPage)
     .component('nuc-about-us-page', NucAboutUsPage)
     .component('nuc-offer-page', NucOfferPage)
     .component('nuc-process-page', NucProcessPage)
