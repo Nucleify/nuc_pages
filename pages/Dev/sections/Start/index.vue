@@ -29,18 +29,18 @@
         </div>
 
         <div class="dev-start-cta">
-            <nuc-submit-button
+          <nuc-submit-button
             variant="primary"
             :disabled="demoLoading"
-            @click="handleDemoLogin"
             icon="mdi:play-circle-outline"
             :label="$t('dev-cta-demo')"
+            @click="handleDemoLogin"
           />
           <nuc-submit-button
             variant="secondary"
-            :to="`/${lang}/offer`"
             icon="mdi:arrow-right"
             :label="$t('dev-cta-pricing')"
+            @click="navigateToUrl(`/${lang}/offer`)"
           />
         </div>
       </div>
@@ -88,7 +88,7 @@ import { useRoute } from 'nuxt/app'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import { demoLogin } from 'atomic'
+import { demoLogin, navigateToUrl } from 'atomic'
 
 const { t } = useI18n()
 const route = useRoute()
