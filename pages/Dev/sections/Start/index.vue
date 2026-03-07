@@ -88,7 +88,7 @@ import { useRoute } from 'nuxt/app'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import { demoLogin, navigateToUrl } from 'atomic'
+import { demoLogin, navigateToUrl } from 'nucleify'
 
 const { t } = useI18n()
 const route = useRoute()

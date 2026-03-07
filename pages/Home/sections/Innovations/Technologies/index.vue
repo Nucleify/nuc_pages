@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { isMobile, technologyRequests } from 'atomic'
+import { isMobile, technologyRequests } from 'nucleify'
 
 const { getSiteTechnologies, resultsBySite } = technologyRequests()
 

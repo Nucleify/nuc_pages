@@ -30,7 +30,7 @@ onMounted(() => {
   // Prefetch documentation only after user interaction or much later
   const prefetchDocs = async () => {
     try {
-      const { useDocumentation } = await import('atomic')
+      const { useDocumentation } = await import('nucleify')
       const doc = useDocumentation()
       await doc.prefetchFirstPage()
     } catch (error) {

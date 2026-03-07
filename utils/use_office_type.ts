@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-import { isAnyCurrentUrl, officeRoutes } from 'atomic'
+import { isAnyCurrentUrl, officeRoutes } from 'nucleify'
 
 export function useOfficeType() {
   const officeType = ref(getOfficeType())

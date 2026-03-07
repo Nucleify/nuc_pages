@@ -114,7 +114,7 @@
 import { defineAsyncComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import type { NucTrustBadgeItemInterface } from 'atomic'
+import type { NucTrustBadgeItemInterface } from 'nucleify'
 
 const { t } = useI18n()
 

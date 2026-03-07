@@ -1,7 +1,7 @@
 {
   "name": "nuc_pages",
   "description": "Module that contains page functions.",
-  "version": "0.7.8",
+  "version": "0.7.10",
   "category": "core",
   "installed": true,
   "enabled": true
