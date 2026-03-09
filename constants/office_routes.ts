@@ -6,6 +6,7 @@ export const officeRoutes = {
     'files',
     'settings',
     'structural',
+    'translations',
   ],
   front: [
     'about-us',
