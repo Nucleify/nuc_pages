@@ -2,10 +2,15 @@
   <section id="mission">
     <div class="about-mission-container container">
       <div class="about-mission-header">
-        <nuc-shiny-badge icon="mdi:rocket-launch-outline" :label="$t('about-mission-badge')" />
+        <nuc-shiny-badge
+          icon="mdi:rocket-launch-outline"
+          :label="$t('about-mission-badge')"
+        />
         <h2 class="about-mission-heading">
           {{ $t('about-mission-heading') }}
-          <span class="highlight">{{ $t('about-mission-heading-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('about-mission-heading-highlight') }}
+          </span>
         </h2>
         <p class="about-mission-description">
           {{ $t('about-mission-description') }}
@@ -13,7 +18,11 @@
       </div>
 
       <div class="about-mission-grid">
-        <div v-for="item in features" :key="item.title" class="about-mission-card">
+        <div
+          v-for="item in features"
+          :key="item.title"
+          class="about-mission-card"
+        >
           <div class="about-mission-card-top">
             <div class="about-mission-card-icon">
               <Icon :name="item.icon" />

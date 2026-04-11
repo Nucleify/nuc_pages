@@ -9,16 +9,19 @@
       </div>
 
       <div class="service-hero-content container">
-        <nuc-shiny-badge icon="mdi:lightning-bolt" :label="$t('service-lp-badge')" />
+        <nuc-shiny-badge
+          icon="mdi:lightning-bolt"
+          :label="$t('service-lp-badge')"
+        />
 
         <h1 class="service-hero-title">
           {{ $t('service-lp-title') }}
-          <span class="service-hero-title-highlight">{{ $t('service-lp-title-highlight') }}</span>
+          <span class="service-hero-title-highlight">
+            {{ $t('service-lp-title-highlight') }}
+          </span>
         </h1>
 
-        <p class="service-hero-subtitle">
-          {{ $t('service-lp-subtitle') }}
-        </p>
+        <p class="service-hero-subtitle">{{ $t('service-lp-subtitle') }}</p>
 
         <nuc-trust-badges :items="trustItems" />
       </div>
@@ -27,7 +30,11 @@
     <section class="service-features">
       <div class="container">
         <div class="service-features-grid">
-          <div v-for="feature in features" :key="feature.title" class="service-feature-card">
+          <div
+            v-for="feature in features"
+            :key="feature.title"
+            class="service-feature-card"
+          >
             <div class="service-feature-card-icon">
               <Icon :name="feature.icon" />
             </div>
@@ -42,17 +49,30 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-lp-metrics-heading') }}
-          <span class="highlight">{{ $t('service-lp-metrics-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-lp-metrics-highlight') }}
+          </span>
         </h2>
 
         <div class="service-metrics-comparison">
           <div class="service-metrics-side service-metrics-before">
-            <span class="service-metrics-label">{{ $t('service-lp-metrics-before') }}</span>
+            <span class="service-metrics-label">
+              {{ $t('service-lp-metrics-before') }}
+            </span>
             <div class="service-metrics-bars">
-              <div v-for="metric in metricsBefore" :key="metric.label" class="service-metrics-bar-row">
-                <span class="service-metrics-bar-label">{{ metric.label }}</span>
+              <div
+                v-for="metric in metricsBefore"
+                :key="metric.label"
+                class="service-metrics-bar-row"
+              >
+                <span class="service-metrics-bar-label">
+                  {{ metric.label }}
+                </span>
                 <div class="service-metrics-bar-track">
-                  <div class="service-metrics-bar-fill service-metrics-bar-fill--muted" :style="{ width: `${metric.value}%` }">
+                  <div
+                    class="service-metrics-bar-fill service-metrics-bar-fill--muted"
+                    :style="{ width: `${metric.value}%` }"
+                  >
                     <span>{{ metric.value }}%</span>
                   </div>
                 </div>
@@ -65,12 +85,23 @@
           </div>
 
           <div class="service-metrics-side service-metrics-after">
-            <span class="service-metrics-label service-metrics-label--success">{{ $t('service-lp-metrics-after') }}</span>
+            <span class="service-metrics-label service-metrics-label--success">
+              {{ $t('service-lp-metrics-after') }}
+            </span>
             <div class="service-metrics-bars">
-              <div v-for="metric in metricsAfter" :key="metric.label" class="service-metrics-bar-row">
-                <span class="service-metrics-bar-label">{{ metric.label }}</span>
+              <div
+                v-for="metric in metricsAfter"
+                :key="metric.label"
+                class="service-metrics-bar-row"
+              >
+                <span class="service-metrics-bar-label">
+                  {{ metric.label }}
+                </span>
                 <div class="service-metrics-bar-track">
-                  <div class="service-metrics-bar-fill" :style="{ width: `${metric.value}%` }">
+                  <div
+                    class="service-metrics-bar-fill"
+                    :style="{ width: `${metric.value}%` }"
+                  >
                     <span>{{ metric.value }}%</span>
                   </div>
                 </div>
@@ -90,10 +121,12 @@
 
         <div class="service-sprint-timeline">
           <div class="service-sprint-line" />
-          <div v-for="(day, i) in sprintDays" :key="day.title" class="service-sprint-day">
-            <div class="service-sprint-dot">
-              <span>{{ i + 1 }}</span>
-            </div>
+          <div
+            v-for="(day, i) in sprintDays"
+            :key="day.title"
+            class="service-sprint-day"
+          >
+            <div class="service-sprint-dot"><span>{{ i + 1 }}</span></div>
             <div class="service-sprint-card">
               <div class="service-sprint-card-badge">{{ day.badge }}</div>
               <h3>{{ day.title }}</h3>
@@ -108,11 +141,19 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-lp-benefits-heading') }}
-          <span class="highlight">{{ $t('service-lp-benefits-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-lp-benefits-highlight') }}
+          </span>
         </h2>
         <div class="service-benefits-grid">
-          <div v-for="benefit in benefits" :key="benefit.title" class="service-benefit-item">
-            <div class="service-benefit-icon"><Icon :name="benefit.icon" /></div>
+          <div
+            v-for="benefit in benefits"
+            :key="benefit.title"
+            class="service-benefit-item"
+          >
+            <div class="service-benefit-icon">
+              <Icon :name="benefit.icon" />
+            </div>
             <div class="service-benefit-content">
               <span>{{ benefit.title }}</span>
               <p>{{ benefit.desc }}</p>

@@ -15,9 +15,7 @@
             :class="{ 'dev-dx-nav-item-active': activeIndex === i }"
             @click="activeIndex = i"
           >
-            <div class="dev-dx-nav-icon">
-              <Icon :name="item.icon" />
-            </div>
+            <div class="dev-dx-nav-icon"><Icon :name="item.icon" /></div>
             <div class="dev-dx-nav-text">
               <h3>{{ item.title }}</h3>
               <p>{{ item.desc }}</p>

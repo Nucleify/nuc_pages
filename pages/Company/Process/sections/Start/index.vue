@@ -12,15 +12,19 @@
 
       <h1 class="process-start-title">
         {{ $t('process-start-title') }}
-        <span class="process-start-title-highlight">{{ $t('process-start-title-highlight') }}</span>
+        <span class="process-start-title-highlight">
+          {{ $t('process-start-title-highlight') }}
+        </span>
       </h1>
 
-      <p class="process-start-subtitle">
-        {{ $t('process-start-subtitle') }}
-      </p>
+      <p class="process-start-subtitle">{{ $t('process-start-subtitle') }}</p>
 
       <div class="process-start-indicators">
-        <div v-for="step in steps" :key="step.num" class="process-start-indicator">
+        <div
+          v-for="step in steps"
+          :key="step.num"
+          class="process-start-indicator"
+        >
           <div class="process-start-indicator-num">{{ step.num }}</div>
           <span>{{ step.label }}</span>
         </div>

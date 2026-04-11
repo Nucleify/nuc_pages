@@ -5,7 +5,9 @@
         <div class="offer-floating-stat">
           <Icon name="mdi:lightning-bolt" />
           <span class="offer-floating-stat-value">5 days</span>
-          <span class="offer-floating-stat-label">{{ $t('offer-trust-delivery') }}</span>
+          <span class="offer-floating-stat-label">
+            {{ $t('offer-trust-delivery') }}
+          </span>
         </div>
       </div>
 
@@ -13,7 +15,9 @@
         <div class="offer-floating-stat">
           <Icon name="mdi:star" />
           <span class="offer-floating-stat-value">99%</span>
-          <span class="offer-floating-stat-label">{{ $t('offer-trust-consultation') }}</span>
+          <span class="offer-floating-stat-label">
+            {{ $t('offer-trust-consultation') }}
+          </span>
         </div>
       </div>
 
@@ -29,7 +33,9 @@
 
         <h1 class="offer-hero-title">
           {{ $t('offer-title') }}
-          <span class="offer-hero-title-highlight">{{ $t('offer-title-highlight') }}</span>
+          <span class="offer-hero-title-highlight">
+            {{ $t('offer-title-highlight') }}
+          </span>
         </h1>
 
         <p class="offer-hero-subtitle">

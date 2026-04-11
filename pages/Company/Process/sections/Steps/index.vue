@@ -2,10 +2,15 @@
   <section id="steps">
     <div class="process-steps-container container">
       <div class="process-steps-header">
-        <nuc-shiny-badge icon="mdi:format-list-numbered" :label="$t('process-steps-badge')" />
+        <nuc-shiny-badge
+          icon="mdi:format-list-numbered"
+          :label="$t('process-steps-badge')"
+        />
         <h2 class="process-steps-heading">
           {{ $t('process-steps-heading') }}
-          <span class="highlight">{{ $t('process-steps-heading-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('process-steps-heading-highlight') }}
+          </span>
         </h2>
         <p class="process-steps-description">
           {{ $t('process-steps-description') }}
@@ -40,9 +45,7 @@
             </ul>
           </div>
 
-          <div class="process-step-dot">
-            <span>{{ index + 1 }}</span>
-          </div>
+          <div class="process-step-dot"><span>{{ index + 1 }}</span></div>
 
           <div class="process-step-spacer" />
         </div>

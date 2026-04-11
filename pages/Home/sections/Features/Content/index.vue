@@ -19,12 +19,8 @@
           <div class="sidebar-item active">
             <Icon name="mdi:file-document-outline" />
           </div>
-          <div class="sidebar-item">
-            <Icon name="mdi:image-outline" />
-          </div>
-          <div class="sidebar-item">
-            <Icon name="mdi:cog-outline" />
-          </div>
+          <div class="sidebar-item"><Icon name="mdi:image-outline" /></div>
+          <div class="sidebar-item"><Icon name="mdi:cog-outline" /></div>
         </div>
         <div class="preview-content">
           <div class="content-block title"></div>

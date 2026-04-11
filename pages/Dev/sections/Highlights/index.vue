@@ -13,21 +13,27 @@
             <span class="dev-hl-tag">{{ $t('dev-hl-overrides-title') }}</span>
             <h3>{{ $t('dev-hl-overrides-desc') }}</h3>
             <ul class="dev-hl-list">
-              <li v-for="p in overridePoints" :key="p"><Icon name="mdi:chevron-right" /><span>{{ p }}</span></li>
+              <li v-for="p in overridePoints" :key="p">
+                <Icon name="mdi:chevron-right" /><span>{{ p }}</span>
+              </li>
             </ul>
           </div>
           <div class="dev-hl-visual dev-hl-visual-layers">
             <div class="dev-hl-layer dev-hl-layer-3">
               <span class="dev-hl-layer-label">your-app/</span>
-              <div class="dev-hl-layer-line" /><div class="dev-hl-layer-line dev-hl-layer-line-short" />
+              <div class="dev-hl-layer-line" />
+              <div class="dev-hl-layer-line dev-hl-layer-line-short" />
             </div>
             <div class="dev-hl-layer dev-hl-layer-2">
               <span class="dev-hl-layer-label">overrides/</span>
-              <div class="dev-hl-layer-line" /><div class="dev-hl-layer-line" />
+              <div class="dev-hl-layer-line" />
+              <div class="dev-hl-layer-line" />
             </div>
             <div class="dev-hl-layer dev-hl-layer-1">
               <span class="dev-hl-layer-label">core/</span>
-              <div class="dev-hl-layer-line" /><div class="dev-hl-layer-line dev-hl-layer-line-short" /><div class="dev-hl-layer-line" />
+              <div class="dev-hl-layer-line" />
+              <div class="dev-hl-layer-line dev-hl-layer-line-short" />
+              <div class="dev-hl-layer-line" />
             </div>
           </div>
         </div>
@@ -35,7 +41,10 @@
         <div class="dev-hl-card dev-hl-card-2">
           <div class="dev-hl-visual dev-hl-visual-dash">
             <div class="dev-hl-dash-sidebar">
-              <div class="dev-hl-dash-dot" /><div class="dev-hl-dash-dot" /><div class="dev-hl-dash-dot" /><div class="dev-hl-dash-dot" />
+              <div class="dev-hl-dash-dot" />
+              <div class="dev-hl-dash-dot" />
+              <div class="dev-hl-dash-dot" />
+              <div class="dev-hl-dash-dot" />
             </div>
             <div class="dev-hl-dash-main">
               <div class="dev-hl-dash-bar-row">
@@ -44,7 +53,9 @@
                 <div class="dev-hl-dash-bar" style="width: 70%" />
               </div>
               <div class="dev-hl-dash-cards">
-                <div /><div /><div />
+                <div />
+                <div />
+                <div />
               </div>
             </div>
           </div>
@@ -52,7 +63,9 @@
             <span class="dev-hl-tag">{{ $t('dev-hl-backoffice-title') }}</span>
             <p>{{ $t('dev-hl-backoffice-desc') }}</p>
             <ul class="dev-hl-list">
-              <li v-for="p in backofficePoints" :key="p"><Icon name="mdi:chevron-right" /><span>{{ p }}</span></li>
+              <li v-for="p in backofficePoints" :key="p">
+                <Icon name="mdi:chevron-right" /><span>{{ p }}</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -60,14 +73,26 @@
         <div class="dev-hl-card dev-hl-card-3">
           <div class="dev-hl-visual dev-hl-visual-palette">
             <div class="dev-hl-swatch-row">
-              <div v-for="c in palettePrimary" :key="c" class="dev-hl-swatch" :style="{ background: c }" />
+              <div
+                v-for="c in palettePrimary"
+                :key="c"
+                class="dev-hl-swatch"
+                :style="{ background: c }"
+              />
             </div>
             <div class="dev-hl-swatch-row">
-              <div v-for="c in paletteSecondary" :key="c" class="dev-hl-swatch" :style="{ background: c }" />
+              <div
+                v-for="c in paletteSecondary"
+                :key="c"
+                class="dev-hl-swatch"
+                :style="{ background: c }"
+              />
             </div>
             <div class="dev-hl-mode-toggle">
               <Icon name="mdi:white-balance-sunny" />
-              <div class="dev-hl-mode-track"><div class="dev-hl-mode-thumb" /></div>
+              <div class="dev-hl-mode-track">
+                <div class="dev-hl-mode-thumb" />
+              </div>
               <Icon name="mdi:moon-waning-crescent" />
             </div>
           </div>
@@ -75,7 +100,9 @@
             <span class="dev-hl-tag">{{ $t('dev-hl-theming-title') }}</span>
             <p>{{ $t('dev-hl-theming-desc') }}</p>
             <ul class="dev-hl-list">
-              <li v-for="p in themingPoints" :key="p"><Icon name="mdi:chevron-right" /><span>{{ p }}</span></li>
+              <li v-for="p in themingPoints" :key="p">
+                <Icon name="mdi:chevron-right" /><span>{{ p }}</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -85,16 +112,25 @@
             <span class="dev-hl-tag">{{ $t('dev-hl-responsive-title') }}</span>
             <h3>{{ $t('dev-hl-responsive-desc') }}</h3>
             <ul class="dev-hl-list">
-              <li v-for="p in responsivePoints" :key="p"><Icon name="mdi:chevron-right" /><span>{{ p }}</span></li>
+              <li v-for="p in responsivePoints" :key="p">
+                <Icon name="mdi:chevron-right" /><span>{{ p }}</span>
+              </li>
             </ul>
           </div>
           <div class="dev-hl-visual dev-hl-visual-devices">
             <div class="dev-hl-device dev-hl-device-desktop">
               <div class="dev-hl-device-bar"><span /><span /><span /></div>
-              <div class="dev-hl-device-screen"><div /><div /><div /></div>
+              <div class="dev-hl-device-screen">
+                <div />
+                <div />
+                <div />
+              </div>
             </div>
             <div class="dev-hl-device dev-hl-device-tablet">
-              <div class="dev-hl-device-screen"><div /><div /></div>
+              <div class="dev-hl-device-screen">
+                <div />
+                <div />
+              </div>
             </div>
             <div class="dev-hl-device dev-hl-device-phone">
               <div class="dev-hl-device-screen"><div /></div>

@@ -4,9 +4,7 @@
     <div class="error-404-content container">
       <div class="error-404-number">404</div>
       <h1 class="error-404-title">{{ $t('error-404-title') }}</h1>
-      <p class="error-404-message">
-        {{ $t('error-404-message') }}
-      </p>
+      <p class="error-404-message">{{ $t('error-404-message') }}</p>
       <div class="error-404-actions">
         <nuc-submit-button
           :label="$t('error-404-back-home')"
@@ -49,4 +47,3 @@ function goBack(): void {
   }
 }
 </script>
-

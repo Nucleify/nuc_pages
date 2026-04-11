@@ -17,9 +17,18 @@
           <h2>{{ $t('legal-cookies-types-title') }}</h2>
           <p>{{ $t('legal-cookies-types-text') }}</p>
           <ul class="legal-list">
-            <li><strong>{{ $t('legal-cookies-essential-label') }}</strong> — {{ $t('legal-cookies-essential-text') }}</li>
-            <li><strong>{{ $t('legal-cookies-analytics-label') }}</strong> — {{ $t('legal-cookies-analytics-text') }}</li>
-            <li><strong>{{ $t('legal-cookies-functional-label') }}</strong> — {{ $t('legal-cookies-functional-text') }}</li>
+            <li>
+              <strong>{{ $t('legal-cookies-essential-label') }}</strong>
+              — {{ $t('legal-cookies-essential-text') }}
+            </li>
+            <li>
+              <strong>{{ $t('legal-cookies-analytics-label') }}</strong>
+              — {{ $t('legal-cookies-analytics-text') }}
+            </li>
+            <li>
+              <strong>{{ $t('legal-cookies-functional-label') }}</strong>
+              — {{ $t('legal-cookies-functional-text') }}
+            </li>
           </ul>
         </section>
 

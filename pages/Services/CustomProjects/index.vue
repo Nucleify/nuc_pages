@@ -9,16 +9,19 @@
       </div>
 
       <div class="service-hero-content container">
-        <nuc-shiny-badge icon="mdi:puzzle-outline" :label="$t('service-cp-badge')" />
+        <nuc-shiny-badge
+          icon="mdi:puzzle-outline"
+          :label="$t('service-cp-badge')"
+        />
 
         <h1 class="service-hero-title">
           {{ $t('service-cp-title') }}
-          <span class="service-hero-title-highlight">{{ $t('service-cp-title-highlight') }}</span>
+          <span class="service-hero-title-highlight">
+            {{ $t('service-cp-title-highlight') }}
+          </span>
         </h1>
 
-        <p class="service-hero-subtitle">
-          {{ $t('service-cp-subtitle') }}
-        </p>
+        <p class="service-hero-subtitle">{{ $t('service-cp-subtitle') }}</p>
 
         <nuc-trust-badges :items="trustItems" />
       </div>
@@ -27,7 +30,11 @@
     <section class="service-features">
       <div class="container">
         <div class="service-features-grid">
-          <div v-for="feature in features" :key="feature.title" class="service-feature-card">
+          <div
+            v-for="feature in features"
+            :key="feature.title"
+            class="service-feature-card"
+          >
             <div class="service-feature-card-icon">
               <Icon :name="feature.icon" />
             </div>
@@ -46,10 +53,18 @@
         </h2>
 
         <div class="service-techstack-grid">
-          <div v-for="category in techCategories" :key="category.title" class="service-techstack-category">
+          <div
+            v-for="category in techCategories"
+            :key="category.title"
+            class="service-techstack-category"
+          >
             <h3>{{ category.title }}</h3>
             <div class="service-techstack-items">
-              <div v-for="tech in category.items" :key="tech.name" class="service-techstack-item">
+              <div
+                v-for="tech in category.items"
+                :key="tech.name"
+                class="service-techstack-item"
+              >
                 <Icon :name="tech.icon" />
                 <span>{{ tech.name }}</span>
               </div>
@@ -67,13 +82,17 @@
         </h2>
 
         <div class="service-phases-grid">
-          <div v-for="(phase, i) in phases" :key="phase.title" class="service-phase-card">
+          <div
+            v-for="(phase, i) in phases"
+            :key="phase.title"
+            class="service-phase-card"
+          >
             <div class="service-phase-card-accent" />
-            <div class="service-phase-num">{{ String(i + 1).padStart(2, '0') }}</div>
+            <div class="service-phase-num">
+              {{ String(i + 1).padStart(2, '0') }}
+            </div>
             <div class="service-phase-header">
-              <div class="service-phase-icon">
-                <Icon :name="phase.icon" />
-              </div>
+              <div class="service-phase-icon"><Icon :name="phase.icon" /></div>
               <div>
                 <h3>{{ phase.title }}</h3>
                 <span class="service-phase-duration">{{ phase.duration }}</span>
@@ -95,11 +114,19 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-cp-benefits-heading') }}
-          <span class="highlight">{{ $t('service-cp-benefits-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-cp-benefits-highlight') }}
+          </span>
         </h2>
         <div class="service-benefits-grid">
-          <div v-for="benefit in benefits" :key="benefit.title" class="service-benefit-item">
-            <div class="service-benefit-icon"><Icon :name="benefit.icon" /></div>
+          <div
+            v-for="benefit in benefits"
+            :key="benefit.title"
+            class="service-benefit-item"
+          >
+            <div class="service-benefit-icon">
+              <Icon :name="benefit.icon" />
+            </div>
             <div class="service-benefit-content">
               <span>{{ benefit.title }}</span>
               <p>{{ benefit.desc }}</p>

@@ -15,10 +15,10 @@
           :style="{ animationDelay: `${i * 60}ms` }"
         >
           <div class="dev-module-card-header">
-            <div class="dev-module-card-icon">
-              <Icon :name="mod.icon" />
-            </div>
-            <span v-if="mod.version" class="dev-module-version">{{ mod.version }}</span>
+            <div class="dev-module-card-icon"><Icon :name="mod.icon" /></div>
+            <span v-if="mod.version" class="dev-module-version">
+              {{ mod.version }}
+            </span>
           </div>
           <div class="dev-module-card-content">
             <h3>{{ mod.name }}</h3>

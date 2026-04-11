@@ -3,13 +3,13 @@
     <div class="structure-container">
       <div class="content">
         <div class="animation-container">
-          <DeferredContent>
-            <nuc-structure-animation />
-          </DeferredContent>
+          <DeferredContent> <nuc-structure-animation /> </DeferredContent>
         </div>
         <div class="description-container">
           <ad-heading :tag="3" class="title">
-            <div class="shiny">{{ $t('innovations-structure-title-highlight') }}&nbsp;</div>
+            <div class="shiny">
+              {{ $t('innovations-structure-title-highlight') }}&nbsp;
+            </div>
             <span>{{ $t('innovations-structure-title') }}</span>
           </ad-heading>
           <ad-paragraph

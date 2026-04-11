@@ -9,11 +9,7 @@
     visual-position="left"
   >
     <div class="speedometers-grid">
-      <div 
-        v-for="metric in metrics" 
-        :key="metric.id" 
-        class="speedometer-item"
-      >
+      <div v-for="metric in metrics" :key="metric.id" class="speedometer-item">
         <div class="mini-speedometer">
           <svg viewBox="0 0 100 60" class="speedometer-svg">
             <path
@@ -33,7 +29,10 @@
               :stroke-dashoffset="125.6 * (1 - metric.score / 100)"
             />
           </svg>
-          <span class="speedometer-value" :style="{ color: getScoreColor(metric.score) }">
+          <span
+            class="speedometer-value"
+            :style="{ color: getScoreColor(metric.score) }"
+          >
             {{ metric.score }}
           </span>
         </div>

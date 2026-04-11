@@ -13,12 +13,12 @@
 
         <h1 class="about-start-title">
           {{ $t('about-start-title') }}
-          <span class="about-start-title-highlight">{{ $t('about-start-title-highlight') }}</span>
+          <span class="about-start-title-highlight">
+            {{ $t('about-start-title-highlight') }}
+          </span>
         </h1>
 
-        <p class="about-start-subtitle">
-          {{ $t('about-start-subtitle') }}
-        </p>
+        <p class="about-start-subtitle">{{ $t('about-start-subtitle') }}</p>
       </div>
 
       <div class="about-start-right">
@@ -28,7 +28,11 @@
             <span>{{ $t('about-card-title') }}</span>
           </div>
 
-          <a class="about-start-card-company" :href="companyLink" target="_blank">
+          <a
+            class="about-start-card-company"
+            :href="companyLink"
+            target="_blank"
+          >
             <Icon name="mdi:domain" />
             <span>{{ $t('footer-company-name') }}</span>
           </a>
@@ -48,8 +52,12 @@
                 <Icon :name="item.icon" />
               </div>
               <div class="about-start-card-item-text">
-                <span class="about-start-card-item-value">{{ item.value }}</span>
-                <span class="about-start-card-item-label">{{ item.label }}</span>
+                <span class="about-start-card-item-value">
+                  {{ item.value }}
+                </span>
+                <span class="about-start-card-item-label">
+                  {{ item.label }}
+                </span>
               </div>
             </component>
           </div>

@@ -8,7 +8,11 @@
             <div class="about-process-line-shimmer" />
           </div>
           <div class="about-process-steps">
-            <div v-for="(step, index) in processSteps" :key="step.title" class="about-process-step">
+            <div
+              v-for="(step, index) in processSteps"
+              :key="step.title"
+              class="about-process-step"
+            >
               <div class="about-process-step-number">
                 <span>{{ index + 1 }}</span>
               </div>

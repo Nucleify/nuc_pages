@@ -1,9 +1,7 @@
 <template>
   <div class="thank-you-container">
     <div class="thank-you-content container">
-      <div class="thank-you-icon">
-        <Icon name="mdi:check-circle" />
-      </div>
+      <div class="thank-you-icon"><Icon name="mdi:check-circle" /></div>
 
       <h1 class="thank-you-title">{{ $t('thank-you-title') }}</h1>
       <p class="thank-you-message">{{ $t('thank-you-message') }}</p>
@@ -30,4 +28,3 @@ function navigateToHome(): void {
   navigateTo(`/${locale.value}/home`)
 }
 </script>
-

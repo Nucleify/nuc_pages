@@ -2,10 +2,15 @@
   <section id="values">
     <div class="about-values-container container">
       <div class="about-values-header">
-        <nuc-shiny-badge icon="mdi:star-four-points-outline" :label="$t('about-values-badge')" />
+        <nuc-shiny-badge
+          icon="mdi:star-four-points-outline"
+          :label="$t('about-values-badge')"
+        />
         <h2 class="about-values-heading">
           {{ $t('about-values-heading') }}
-          <span class="highlight">{{ $t('about-values-heading-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('about-values-heading-highlight') }}
+          </span>
         </h2>
         <p class="about-values-description">
           {{ $t('about-values-description') }}
@@ -19,10 +24,10 @@
           class="about-value-card"
           :class="{ 'about-value-card--featured': index === 0 }"
         >
-          <div class="about-value-card-number">{{ String(index + 1).padStart(2, '0') }}</div>
-          <div class="about-value-card-icon">
-            <Icon :name="value.icon" />
+          <div class="about-value-card-number">
+            {{ String(index + 1).padStart(2, '0') }}
           </div>
+          <div class="about-value-card-icon"><Icon :name="value.icon" /></div>
           <h3 class="about-value-card-title">{{ value.title }}</h3>
           <p class="about-value-card-desc">{{ value.desc }}</p>
         </div>

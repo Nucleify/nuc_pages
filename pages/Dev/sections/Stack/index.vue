@@ -7,7 +7,11 @@
       </h2>
 
       <div class="dev-stack-grid">
-        <div v-for="category in stackCategories" :key="category.title" class="dev-stack-category">
+        <div
+          v-for="category in stackCategories"
+          :key="category.title"
+          class="dev-stack-category"
+        >
           <h3>{{ category.title }}</h3>
           <div class="dev-stack-items">
             <div
@@ -16,9 +20,7 @@
               class="dev-stack-item"
               :style="{ animationDelay: `${i * 80}ms` }"
             >
-              <div class="dev-stack-item-icon">
-                <Icon :name="tech.icon" />
-              </div>
+              <div class="dev-stack-item-icon"><Icon :name="tech.icon" /></div>
               <div class="dev-stack-item-info">
                 <span>{{ tech.name }}</span>
                 <small>{{ tech.desc }}</small>

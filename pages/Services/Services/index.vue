@@ -9,16 +9,19 @@
       </div>
 
       <div class="service-hero-content container">
-        <nuc-shiny-badge icon="mdi:briefcase-outline" :label="$t('service-main-badge')" />
+        <nuc-shiny-badge
+          icon="mdi:briefcase-outline"
+          :label="$t('service-main-badge')"
+        />
 
         <h1 class="service-hero-title">
           {{ $t('service-main-title') }}
-          <span class="service-hero-title-highlight">{{ $t('service-main-title-highlight') }}</span>
+          <span class="service-hero-title-highlight">
+            {{ $t('service-main-title-highlight') }}
+          </span>
         </h1>
 
-        <p class="service-hero-subtitle">
-          {{ $t('service-main-subtitle') }}
-        </p>
+        <p class="service-hero-subtitle">{{ $t('service-main-subtitle') }}</p>
       </div>
     </section>
 

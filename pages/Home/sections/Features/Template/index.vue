@@ -1,6 +1,6 @@
 <template>
-  <section 
-    :id="props.sectionId" 
+  <section
+    :id="props.sectionId"
     :class="['feature-section', { 'visual-left': props.visualPosition === 'left' }]"
   >
     <div class="feature-container container">
@@ -11,7 +11,7 @@
           <span class="highlight">{{ props.headingHighlight }}</span>
         </h2>
         <p class="feature-description">{{ props.description }}</p>
-        
+
         <div class="feature-list">
           <div
             v-for="feature in props.features"
@@ -26,9 +26,7 @@
 
       <div class="feature-visual">
         <ad-card class="nuc-card-base feature-card">
-          <template #content>
-            <slot />
-          </template>
+          <template #content> <slot /> </template>
         </ad-card>
       </div>
     </div>
@@ -42,4 +40,3 @@ const props = withDefaults(defineProps<FeatureTemplateInterface>(), {
   visualPosition: 'right',
 })
 </script>
-

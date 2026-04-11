@@ -13,12 +13,12 @@
 
         <h1 class="service-hero-title">
           {{ $t('service-bw-title') }}
-          <span class="service-hero-title-highlight">{{ $t('service-bw-title-highlight') }}</span>
+          <span class="service-hero-title-highlight">
+            {{ $t('service-bw-title-highlight') }}
+          </span>
         </h1>
 
-        <p class="service-hero-subtitle">
-          {{ $t('service-bw-subtitle') }}
-        </p>
+        <p class="service-hero-subtitle">{{ $t('service-bw-subtitle') }}</p>
 
         <nuc-trust-badges :items="trustItems" />
       </div>
@@ -27,7 +27,11 @@
     <section class="service-features">
       <div class="container">
         <div class="service-features-grid">
-          <div v-for="feature in features" :key="feature.title" class="service-feature-card">
+          <div
+            v-for="feature in features"
+            :key="feature.title"
+            class="service-feature-card"
+          >
             <div class="service-feature-card-icon">
               <Icon :name="feature.icon" />
             </div>
@@ -42,15 +46,25 @@
       <div class="container">
         <div class="service-scope-layout">
           <div class="service-scope-info">
-            <nuc-shiny-badge icon="mdi:clipboard-check-outline" :label="$t('service-bw-scope-badge')" />
+            <nuc-shiny-badge
+              icon="mdi:clipboard-check-outline"
+              :label="$t('service-bw-scope-badge')"
+            />
             <h2 class="service-section-heading service-section-heading-left">
               {{ $t('service-bw-scope-heading') }}
-              <span class="highlight">{{ $t('service-bw-scope-highlight') }}</span>
+              <span class="highlight">
+                {{ $t('service-bw-scope-highlight') }}
+              </span>
             </h2>
             <p class="service-scope-desc">{{ $t('service-bw-scope-desc') }}</p>
           </div>
           <div class="service-scope-checklist">
-            <div v-for="(item, i) in scopeItems" :key="item" class="service-scope-item" :style="{ animationDelay: `${i * 0.08}s` }">
+            <div
+              v-for="(item, i) in scopeItems"
+              :key="item"
+              class="service-scope-item"
+              :style="{ animationDelay: `${i * 0.08}s` }"
+            >
               <div class="service-scope-check">
                 <Icon name="mdi:check-bold" />
               </div>
@@ -65,18 +79,29 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-bw-process-heading') }}
-          <span class="highlight">{{ $t('service-bw-process-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-bw-process-highlight') }}
+          </span>
         </h2>
 
         <div class="service-process-steps">
-          <div v-for="(step, i) in processSteps" :key="step.title" class="service-process-step">
-            <div class="service-process-step-num">{{ String(i + 1).padStart(2, '0') }}</div>
+          <div
+            v-for="(step, i) in processSteps"
+            :key="step.title"
+            class="service-process-step"
+          >
+            <div class="service-process-step-num">
+              {{ String(i + 1).padStart(2, '0') }}
+            </div>
             <div class="service-process-step-icon">
               <Icon :name="step.icon" />
             </div>
             <h3>{{ step.title }}</h3>
             <p>{{ step.desc }}</p>
-            <div v-if="i < processSteps.length - 1" class="service-process-step-connector">
+            <div
+              v-if="i < processSteps.length - 1"
+              class="service-process-step-connector"
+            >
               <Icon name="mdi:chevron-right" />
             </div>
           </div>
@@ -88,11 +113,17 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-bw-benefits-heading') }}
-          <span class="highlight">{{ $t('service-bw-benefits-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-bw-benefits-highlight') }}
+          </span>
         </h2>
 
         <div class="service-benefits-grid">
-          <div v-for="benefit in benefits" :key="benefit.title" class="service-benefit-item">
+          <div
+            v-for="benefit in benefits"
+            :key="benefit.title"
+            class="service-benefit-item"
+          >
             <div class="service-benefit-icon">
               <Icon :name="benefit.icon" />
             </div>

@@ -20,16 +20,20 @@
 
       <div class="support-messages">
         <div class="support-msg">
-          <div class="msg-avatar resolved">
-            <Icon name="mdi:check" />
-          </div>
+          <div class="msg-avatar resolved"><Icon name="mdi:check" /></div>
           <div class="msg-content">
             <div class="msg-top">
-              <span class="msg-sender">{{ $t('features-support-msg-1-sender') }}</span>
+              <span class="msg-sender">
+                {{ $t('features-support-msg-1-sender') }}
+              </span>
               <span class="msg-time">2 min</span>
             </div>
-            <span class="msg-text">{{ $t('features-support-msg-1-text') }}</span>
-            <span class="msg-tag resolved">{{ $t('features-support-tag-resolved') }}</span>
+            <span class="msg-text">
+              {{ $t('features-support-msg-1-text') }}
+            </span>
+            <span class="msg-tag resolved">
+              {{ $t('features-support-tag-resolved') }}
+            </span>
           </div>
         </div>
 
@@ -39,25 +43,35 @@
           </div>
           <div class="msg-content">
             <div class="msg-top">
-              <span class="msg-sender">{{ $t('features-support-msg-2-sender') }}</span>
+              <span class="msg-sender">
+                {{ $t('features-support-msg-2-sender') }}
+              </span>
               <span class="msg-time">15 min</span>
             </div>
-            <span class="msg-text">{{ $t('features-support-msg-2-text') }}</span>
-            <span class="msg-tag active">{{ $t('features-support-tag-replied') }}</span>
+            <span class="msg-text">
+              {{ $t('features-support-msg-2-text') }}
+            </span>
+            <span class="msg-tag active">
+              {{ $t('features-support-tag-replied') }}
+            </span>
           </div>
         </div>
 
         <div class="support-msg">
-          <div class="msg-avatar resolved">
-            <Icon name="mdi:check" />
-          </div>
+          <div class="msg-avatar resolved"><Icon name="mdi:check" /></div>
           <div class="msg-content">
             <div class="msg-top">
-              <span class="msg-sender">{{ $t('features-support-msg-3-sender') }}</span>
+              <span class="msg-sender">
+                {{ $t('features-support-msg-3-sender') }}
+              </span>
               <span class="msg-time">1h</span>
             </div>
-            <span class="msg-text">{{ $t('features-support-msg-3-text') }}</span>
-            <span class="msg-tag resolved">{{ $t('features-support-tag-resolved') }}</span>
+            <span class="msg-text">
+              {{ $t('features-support-msg-3-text') }}
+            </span>
+            <span class="msg-tag resolved">
+              {{ $t('features-support-tag-resolved') }}
+            </span>
           </div>
         </div>
       </div>

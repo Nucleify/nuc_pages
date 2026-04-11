@@ -2,10 +2,15 @@
   <section id="guarantees">
     <div class="process-guarantees-container container">
       <div class="process-guarantees-header">
-        <nuc-shiny-badge icon="mdi:shield-check-outline" :label="$t('process-guarantees-badge')" />
+        <nuc-shiny-badge
+          icon="mdi:shield-check-outline"
+          :label="$t('process-guarantees-badge')"
+        />
         <h2 class="process-guarantees-heading">
           {{ $t('process-guarantees-heading') }}
-          <span class="highlight">{{ $t('process-guarantees-heading-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('process-guarantees-heading-highlight') }}
+          </span>
         </h2>
         <p class="process-guarantees-description">
           {{ $t('process-guarantees-description') }}
@@ -19,7 +24,9 @@
           class="process-guarantee-card"
         >
           <div class="process-guarantee-card-accent" />
-          <div class="process-guarantee-card-num">{{ String(index + 1).padStart(2, '0') }}</div>
+          <div class="process-guarantee-card-num">
+            {{ String(index + 1).padStart(2, '0') }}
+          </div>
 
           <div class="process-guarantee-card-head">
             <div class="process-guarantee-card-icon">

@@ -13,12 +13,12 @@
 
         <h1 class="service-hero-title">
           {{ $t('service-wr-title') }}
-          <span class="service-hero-title-highlight">{{ $t('service-wr-title-highlight') }}</span>
+          <span class="service-hero-title-highlight">
+            {{ $t('service-wr-title-highlight') }}
+          </span>
         </h1>
 
-        <p class="service-hero-subtitle">
-          {{ $t('service-wr-subtitle') }}
-        </p>
+        <p class="service-hero-subtitle">{{ $t('service-wr-subtitle') }}</p>
 
         <nuc-trust-badges :items="trustItems" />
       </div>
@@ -27,7 +27,11 @@
     <section class="service-features">
       <div class="container">
         <div class="service-features-grid">
-          <div v-for="feature in features" :key="feature.title" class="service-feature-card">
+          <div
+            v-for="feature in features"
+            :key="feature.title"
+            class="service-feature-card"
+          >
             <div class="service-feature-card-icon">
               <Icon :name="feature.icon" />
             </div>
@@ -42,7 +46,9 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-wr-comparison-heading') }}
-          <span class="highlight">{{ $t('service-wr-comparison-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-wr-comparison-highlight') }}
+          </span>
         </h2>
 
         <div class="service-comparison-cards">
@@ -52,7 +58,11 @@
               <span>{{ $t('service-wr-before-label') }}</span>
             </div>
             <div class="service-comparison-card-items">
-              <div v-for="item in comparisonBefore" :key="item" class="service-comparison-item service-comparison-item--bad">
+              <div
+                v-for="item in comparisonBefore"
+                :key="item"
+                class="service-comparison-item service-comparison-item--bad"
+              >
                 <Icon name="mdi:close" />
                 <span>{{ item }}</span>
               </div>
@@ -69,7 +79,11 @@
               <span>{{ $t('service-wr-after-label') }}</span>
             </div>
             <div class="service-comparison-card-items">
-              <div v-for="item in comparisonAfter" :key="item" class="service-comparison-item service-comparison-item--good">
+              <div
+                v-for="item in comparisonAfter"
+                :key="item"
+                class="service-comparison-item service-comparison-item--good"
+              >
                 <Icon name="mdi:check" />
                 <span>{{ item }}</span>
               </div>
@@ -83,11 +97,17 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-wr-upgrade-heading') }}
-          <span class="highlight">{{ $t('service-wr-upgrade-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-wr-upgrade-highlight') }}
+          </span>
         </h2>
 
         <div class="service-upgrade-grid">
-          <div v-for="area in upgradeAreas" :key="area.title" class="service-upgrade-card">
+          <div
+            v-for="area in upgradeAreas"
+            :key="area.title"
+            class="service-upgrade-card"
+          >
             <div class="service-upgrade-card-top">
               <div class="service-upgrade-card-icon">
                 <Icon :name="area.icon" />
@@ -96,7 +116,10 @@
             </div>
             <p>{{ area.desc }}</p>
             <div class="service-upgrade-bar">
-              <div class="service-upgrade-bar-fill" :style="{ width: `${area.score}%` }">
+              <div
+                class="service-upgrade-bar-fill"
+                :style="{ width: `${area.score}%` }"
+              >
                 <span>{{ area.score }}%</span>
               </div>
             </div>
@@ -109,11 +132,19 @@
       <div class="container">
         <h2 class="service-section-heading">
           {{ $t('service-wr-benefits-heading') }}
-          <span class="highlight">{{ $t('service-wr-benefits-highlight') }}</span>
+          <span class="highlight">
+            {{ $t('service-wr-benefits-highlight') }}
+          </span>
         </h2>
         <div class="service-benefits-grid">
-          <div v-for="benefit in benefits" :key="benefit.title" class="service-benefit-item">
-            <div class="service-benefit-icon"><Icon :name="benefit.icon" /></div>
+          <div
+            v-for="benefit in benefits"
+            :key="benefit.title"
+            class="service-benefit-item"
+          >
+            <div class="service-benefit-icon">
+              <Icon :name="benefit.icon" />
+            </div>
             <div class="service-benefit-content">
               <span>{{ benefit.title }}</span>
               <p>{{ benefit.desc }}</p>

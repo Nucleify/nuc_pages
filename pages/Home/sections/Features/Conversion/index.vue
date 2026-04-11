@@ -16,37 +16,39 @@
           </div>
           <div class="metric-info">
             <span class="metric-value">+47%</span>
-            <span class="metric-label">{{ $t('features-conversion-metric-clicks') }}</span>
+            <span class="metric-label">
+              {{ $t('features-conversion-metric-clicks') }}
+            </span>
           </div>
         </div>
         <div class="metric-item">
-          <div class="metric-icon">
-            <Icon name="mdi:account-plus" />
-          </div>
+          <div class="metric-icon"><Icon name="mdi:account-plus" /></div>
           <div class="metric-info">
             <span class="metric-value">+89%</span>
-            <span class="metric-label">{{ $t('features-conversion-metric-leads') }}</span>
+            <span class="metric-label">
+              {{ $t('features-conversion-metric-leads') }}
+            </span>
           </div>
         </div>
         <div class="metric-item highlight-metric">
-          <div class="metric-icon">
-            <Icon name="mdi:cash-multiple" />
-          </div>
+          <div class="metric-icon"><Icon name="mdi:cash-multiple" /></div>
           <div class="metric-info">
             <span class="metric-value">+62%</span>
-            <span class="metric-label">{{ $t('features-conversion-metric-revenue') }}</span>
+            <span class="metric-label">
+              {{ $t('features-conversion-metric-revenue') }}
+            </span>
           </div>
         </div>
       </div>
-      
+
       <div class="preview-cta-demo">
         <div class="cta-example">
           <span class="cta-label">{{ $t('features-conversion-before') }}</span>
-          <div class="cta-button old">{{ $t('features-conversion-old-cta') }}</div>
+          <div class="cta-button old">
+            {{ $t('features-conversion-old-cta') }}
+          </div>
         </div>
-        <div class="cta-arrow">
-          <Icon name="mdi:arrow-right" />
-        </div>
+        <div class="cta-arrow"><Icon name="mdi:arrow-right" /></div>
         <div class="cta-example">
           <span class="cta-label">{{ $t('features-conversion-after') }}</span>
           <div class="cta-button new">

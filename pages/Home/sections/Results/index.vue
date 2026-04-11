@@ -8,9 +8,7 @@
           {{ $t('results-header') }}
           <span class="highlight">{{ $t('results-header-highlight') }}</span>
         </h2>
-        <p class="results-description">
-          {{ $t('results-description') }}
-        </p>
+        <p class="results-description">{{ $t('results-description') }}</p>
       </div>
 
       <div class="stats-grid">
