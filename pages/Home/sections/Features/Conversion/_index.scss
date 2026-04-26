@@ -220,7 +220,7 @@ html:not(.p-dark) #conversion {
       border-color: rgba($primary-color, 0.3);
 
       .metric-value {
-        color: #34d399;
+        color: var(--main-hv);
       }
     }
   }
@@ -237,7 +237,7 @@ html:not(.p-dark) #conversion {
     background: rgba($primary-color, 0.15);
 
     .iconify {
-      color: #34d399;
+      color: var(--main-hv);
     }
   }
 

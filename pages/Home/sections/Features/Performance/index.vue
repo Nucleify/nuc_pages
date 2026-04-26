@@ -22,7 +22,7 @@
             <path
               d="M 10 55 A 40 40 0 0 1 90 55"
               fill="none"
-              stroke="#10b981"
+              stroke="var(--main-c)"
               stroke-width="4"
               stroke-linecap="round"
               :stroke-dasharray="125.6"
@@ -85,7 +85,7 @@ const metrics: Metric[] = [
 ]
 
 function getScoreColor(score: number): string {
-  if (score >= 90) return '#10b981'
+  if (score >= 90) return 'var(--main-c)'
   if (score >= 50) return '#eab308'
   return '#ef4444'
 }

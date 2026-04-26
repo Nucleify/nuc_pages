@@ -205,14 +205,14 @@ html:not(.p-dark) #home #start {
   }
 
   .feature-icon {
-    background: rgba(#34d399, 0.1);
+    background: var(--main-h);
 
     &::before {
-      background: linear-gradient(to top, rgba(#34d399, 0.4), transparent);
+      background: linear-gradient(to top, var(--main-f), transparent);
     }
 
     .iconify {
-      color: #34d399;
+      color: var(--main-hv);
     }
   }
 
@@ -231,6 +231,6 @@ html:not(.p-dark) #home #start {
   }
 
   .start-social-proof {
-    color: #34d399;
+    color: var(--main-hv);
   }
 }

@@ -526,7 +526,7 @@ html:not(.p-dark) #results {
       transform 0.4s ease;
 
     &::before {
-      background: linear-gradient(90deg, transparent, rgba(#34d399, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, var(--main-f), transparent);
     }
 
     &:hover {

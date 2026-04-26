@@ -168,6 +168,18 @@ const responsivePoints = [
   t('dev-hl-responsive-p3'),
 ]
 
-const palettePrimary = ['#10b981', '#34d399', '#6ee7b7', '#a7f3d0', '#d1fae5']
-const paletteSecondary = ['#064e3b', '#065f46', '#047857', '#059669', '#10b981']
+const palettePrimary = [
+  'var(--main-c)',
+  'var(--main-hv)',
+  'var(--main-sc)',
+  'var(--main-sl)',
+  'var(--main-h)',
+]
+const paletteSecondary = [
+  'var(--main-d)',
+  'var(--main-d)',
+  'var(--main-hv)',
+  'var(--main-hv)',
+  'var(--main-c)',
+]
 </script>

@@ -35,14 +35,14 @@
     gap: 5px;
     font-size: 0.7rem;
     font-weight: 500;
-    color: #10b981;
+    color: var(--main-c);
   }
 
   .status-dot {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #10b981;
+    background: var(--main-c);
     animation: pulse-dot 2s ease-in-out infinite;
   }
 
@@ -86,8 +86,8 @@
     }
 
     &.resolved {
-      background: rgba(#10b981, 0.15);
-      color: #10b981;
+      background: var(--main-sl);
+      color: var(--main-c);
     }
 
     &.active {
@@ -141,8 +141,8 @@
     letter-spacing: 0.03em;
 
     &.resolved {
-      background: rgba(#10b981, 0.12);
-      color: #10b981;
+      background: var(--main-h);
+      color: var(--main-c);
     }
 
     &.active {
