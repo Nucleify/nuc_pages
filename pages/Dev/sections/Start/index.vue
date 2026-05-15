@@ -84,17 +84,26 @@ import { useRoute } from 'nuxt/app'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-import { demoLogin, navigateToUrl } from 'nucleify'
+import { demoLogin, navigateToUrl, useAtomicToast } from 'nucleify'
+
+import { useSupabaseClient } from '../../../../../../nuxt/composables/supabase/client'
 
 const { t } = useI18n()
 const route = useRoute()
 const lang = computed(() => (route.params.lang as string) || 'en')
 const demoLoading = ref(false)
+const supabase = useSupabaseClient()
+const { flashToast } = useAtomicToast()
 
 async function handleDemoLogin(): Promise<void> {
   demoLoading.value = true
   try {
-    await demoLogin()
+    await demoLogin({
+      supabase,
+      lang: lang.value,
+      t,
+      flashToast,
+    })
   } finally {
     demoLoading.value = false
   }

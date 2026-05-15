@@ -68,6 +68,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -75,7 +76,8 @@ const { t } = useI18n()
 const companyLink =
   'https://aleo.com/pl/firma/atomic-it-spolka-z-ograniczona-odpowiedzialnoscia'
 
-const cardItems = [
+/** `t()` musi być reaktywne — przy pierwszym setup lazy i18n jeszcze nie ma wpisów z bazy i zostaje surowy klucz w tablicy. */
+const cardItems = computed(() => [
   {
     icon: 'mdi:file-document-outline',
     value: t('about-card-nip-value'),
@@ -100,5 +102,5 @@ const cardItems = [
     label: t('about-card-email-label'),
     link: 'mailto:info@nucleify.io',
   },
-]
+])
 </script>

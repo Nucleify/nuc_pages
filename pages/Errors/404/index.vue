@@ -47,3 +47,7 @@ function goBack(): void {
   }
 }
 </script>
+
+<style lang="scss">
+@import 'index';
+</style>
