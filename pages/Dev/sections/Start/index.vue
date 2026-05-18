@@ -86,7 +86,7 @@ import { useI18n } from 'vue-i18n'
 
 import { demoLogin, navigateToUrl, useAtomicToast } from 'nucleify'
 
-import { useSupabaseClient } from '../../../../../../nuxt/composables/supabase/client'
+import { useSupabaseClient } from 'nuc_client'
 
 const { t } = useI18n()
 const route = useRoute()
