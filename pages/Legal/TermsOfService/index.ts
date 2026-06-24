@@ -1,1 +1,0 @@
-export { default as NucTermsOfServicePage } from './index.vue'

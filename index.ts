@@ -1,15 +1,13 @@
-/**
- *  Module's main file export
- */
 export * from './nuc_pages'
 
-/**
- *  Folders exports
- */
-export * from './constants'
-export * from './pages'
-export * from './utils'
-
-/**
- *  File exports
- */
+export * from './constants/dev_page_map'
+export * from './constants/office_routes'
+export * from './pages/company'
+export * from './pages/dev'
+export * from './pages/errors'
+export * from './pages/home'
+export * from './pages/legal'
+export * from './pages/offer'
+export * from './pages/services'
+export * from './pages/thank-you'
+export * from './utils/use_office_type'

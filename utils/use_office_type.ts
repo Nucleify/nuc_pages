@@ -1,9 +1,7 @@
 import { useRoute } from 'nuxt/app'
 import { ref } from 'vue'
 
-import { isAnyCurrentUrl, officeRoutes } from 'nucleify'
-
-import { pathIsBackOffice } from '../constants/office_routes'
+import { isAnyCurrentUrl, officeRoutes, pathIsBackOffice } from 'nucleify'
 
 function isMinimalShellPath(path: string): boolean {
   const segments = path.split('/').filter(Boolean)

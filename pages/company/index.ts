@@ -1,0 +1,6 @@
+export { default as NucAboutUsPage } from './about-us/index.vue'
+export { default as NucAboutStart } from './about-us/sections/start/index.vue'
+export { default as NucProcessPage } from './process/index.vue'
+export { default as NucProcessGuarantees } from './process/sections/guarantees/index.vue'
+export { default as NucProcessStart } from './process/sections/start/index.vue'
+export { default as NucProcessSteps } from './process/sections/steps/index.vue'

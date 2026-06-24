@@ -1,0 +1,80 @@
+@mixin dev-hero-bg {
+  background: linear-gradient(
+    165deg,
+    $bg-black-color 0%,
+    color-mix(in srgb, $primary-dark-color 7%, $bg-dark-color) 45%,
+    color-mix(in srgb, $primary-dark-color 11%, $bg-black-color) 100%
+  );
+}
+
+@mixin dev-section-bg-gradient {
+  background: linear-gradient(
+    175deg,
+    $bg-black-color 0%,
+    color-mix(in srgb, $primary-dark-color 9%, $bg-dark-color) 40%,
+    color-mix(in srgb, $primary-dark-color 5%, $bg-black-color) 100%
+  );
+}
+
+@mixin dev-light-hero-bg {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, $primary-dark-color 72%, $bg-dark-color) 0%,
+    color-mix(in srgb, $primary-dark-color 58%, $bg-dark-color) 35%,
+    color-mix(in srgb, $primary-dark-color 48%, $bg-black-color) 65%,
+    color-mix(in srgb, $primary-dark-color 32%, $bg-black-color) 100%
+  );
+}
+
+@mixin dev-terminal-header {
+  background: color-mix(in srgb, $primary-dark-color 12%, $bg-black-color);
+}
+
+@mixin dev-terminal-body {
+  background: color-mix(in srgb, $primary-dark-color 7%, $bg-black-color);
+}
+
+@mixin dev-panel-surface($primary-weight: 12%) {
+  background: color-mix(in srgb, $primary-dark-color $primary-weight, $bg-black-color);
+}
+
+@mixin dev-card-surface() {
+  background: color-mix(in srgb, $bg-black-color 72%, $bg-dark-color);
+}
+
+@mixin dev-layer-surface($primary-weight: 10%) {
+  background: color-mix(in srgb, $primary-dark-color $primary-weight, $bg-black-color);
+}
+
+@mixin dev-code-surface() {
+  background: color-mix(in srgb, $primary-dark-color 5%, $bg-black-color);
+}
+
+@mixin dev-text-muted {
+  color: rgba(var(--nuc-white-text-rgb), 0.76);
+}
+
+@mixin dev-text-body {
+  color: rgba(var(--nuc-white-text-rgb), 0.9);
+}
+
+@mixin dev-text-strong {
+  color: rgba(var(--nuc-white-text-rgb), 0.97);
+}
+
+@mixin dev-mock-surface {
+  background: color-mix(in srgb, $bg-black-color 90%, $primary-dark-color);
+  border: 1px solid nuc-primary-rgba(0.52);
+  box-shadow: inset 0 0 0 1px nuc-primary-rgba(0.1);
+}
+
+@mixin dev-mock-fill {
+  background: nuc-primary-rgba(0.2);
+  border: 1px solid nuc-primary-rgba(0.48);
+  box-shadow: inset 0 0 12px nuc-primary-rgba(0.06);
+}
+
+@mixin dev-mock-fill-soft {
+  background: nuc-primary-rgba(0.1);
+  border: 1px solid nuc-primary-rgba(0.4);
+}
