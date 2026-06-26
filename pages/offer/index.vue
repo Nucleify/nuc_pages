@@ -58,9 +58,12 @@
       </a>
     </section>
 
-    <LazyNucSectionPricing />
+    <ad-spacing />
 
+    <LazyNucSectionPricing />
+    <ad-spacing />
     <LazyNucSectionFaq site="offer" />
+    <ad-spacing />
     <LazyNucSectionContact />
   </div>
 </template>

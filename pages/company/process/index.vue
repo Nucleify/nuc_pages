@@ -1,8 +1,11 @@
 <template>
   <div class="process-container">
     <nuc-process-start />
+    <ad-spacing />
     <nuc-process-steps />
+    <ad-spacing />
     <nuc-process-guarantees />
+    <ad-spacing />
     <nuc-section-contact />
   </div>
 </template>

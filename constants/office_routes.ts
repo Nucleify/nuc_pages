@@ -3,6 +3,7 @@ export const officeRoutes = {
     'activity-log',
     'admin',
     'builder',
+    'calendar',
     'entities',
     'files',
     'settings',

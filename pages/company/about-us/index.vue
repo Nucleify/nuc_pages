@@ -1,9 +1,13 @@
 <template>
   <div class="about-us-container">
     <nuc-about-start />
+    <ad-spacing />
     <LazyNucAboutMission />
+    <ad-spacing />
     <LazyNucAboutValues />
+    <ad-spacing />
     <LazyNucAboutProcess />
+    <ad-spacing />
     <LazyNucSectionContact />
   </div>
 </template>

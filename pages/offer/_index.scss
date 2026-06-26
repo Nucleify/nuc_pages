@@ -1,11 +1,6 @@
 .offer-container {
   min-height: 100vh;
-  padding: 2rem 1rem;
   overflow: hidden;
-
-  @media (min-width: $lg) {
-    padding: 3.5rem 0;
-  }
 
   .p-card {
     background: $primary-highlight-color;
@@ -24,9 +19,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6rem 1rem 0;
 
   @media (min-width: $lg) {
     min-height: calc(100vh - 5rem);
+    padding: 8rem 0 0;
   }
 
   &-floating {

@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation'
 import type { JSX } from 'react'
 
-import { AdIcon, NucGridBackground, NucSubmitButton, t } from 'nucleify'
+import { AdIcon, NucSubmitButton, t } from 'nucleify'
 
 import './_index.scss'
 
@@ -19,7 +19,6 @@ export function NucThankYouPage(): JSX.Element {
   return (
     <div id="thank-you">
       <div className="thank-you-container">
-        <NucGridBackground />
         <div className="thank-you-content container">
           <div className="thank-you-icon">
             <AdIcon icon="mdi:check-circle" />

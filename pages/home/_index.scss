@@ -1,10 +1,4 @@
 .home-container {
-  padding: 5rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 3.5rem 0 0;
-  }
-
   .p-card {
     background: $primary-highlight-color;
     border: 1px solid nuc-primary-rgba(0.25) !important;

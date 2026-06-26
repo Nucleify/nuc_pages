@@ -4,6 +4,7 @@ import type { JSX } from 'react'
 
 import {
   AdIcon,
+  AdSpacing,
   NucSectionContact,
   NucSectionFaq,
   NucShinyBadge,
@@ -39,10 +40,12 @@ export function NucOfferPage(): JSX.Element {
           </a>
         </div>
       </section>
+      <AdSpacing />
 
       <div id="offer-faq">
         <NucSectionFaq site="offer" />
       </div>
+      <AdSpacing />
       <NucSectionContact />
     </div>
   )

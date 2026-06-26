@@ -1,9 +1,13 @@
 <template>
   <div class="home-container">
     <nuc-start />
+    <ad-spacing />
     <LazyNucResults />
+    <ad-spacing />
     <LazyNucSectionFaq site="home" />
+    <ad-spacing />
     <LazyNucFeatures />
+    <ad-spacing />
     <LazyNucSectionContact />
   </div>
 </template>

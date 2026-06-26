@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation'
 import type { JSX } from 'react'
 
-import { NucGridBackground, NucSubmitButton, t } from 'nucleify'
+import { NucSubmitButton, t } from 'nucleify'
 
 import './_index.scss'
 
@@ -31,7 +31,6 @@ export function NucError404Page(): JSX.Element {
   return (
     <div id="error-404">
       <div className="error-404-container">
-        <NucGridBackground />
         <div className="error-404-content container">
           <div className="error-404-number">404</div>
           <h1 className="error-404-title">{t('error-404-title')}</h1>

@@ -4,6 +4,7 @@ import type { JSX } from 'react'
 
 import {
   AdIcon,
+  AdSpacing,
   NucSectionContact,
   NucSectionFaq,
   NucShinyBadge,
@@ -70,6 +71,7 @@ export function NucServicesPage(): JSX.Element {
           <p className="service-hero-subtitle">{t('service-main-subtitle')}</p>
         </div>
       </section>
+      <AdSpacing />
 
       <section className="service-features">
         <div className="container">
@@ -93,9 +95,12 @@ export function NucServicesPage(): JSX.Element {
           </div>
         </div>
       </section>
+      <AdSpacing />
 
       <NucSectionFaq site="home" />
+      <AdSpacing />
       <NucSectionContact />
+      <AdSpacing />
     </div>
   )
 }

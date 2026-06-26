@@ -2,7 +2,7 @@
 
 import type { JSX } from 'react'
 
-import { AdIcon, NucGridBackground, NucSectionEmailUs, t } from 'nucleify'
+import { AdIcon, NucSectionEmailUs, t } from 'nucleify'
 
 import './_index.scss'
 
@@ -27,7 +27,6 @@ const startFeatureItems = [
 export function NucStart(): JSX.Element {
   return (
     <section id="start">
-      <NucGridBackground className="start-grid" />
       <div className="container start-container">
         <div className="start-left">
           <span className="start-badge">{t('home-badge')}</span>

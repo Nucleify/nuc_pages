@@ -9,10 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 1rem 4rem;
+  padding: 6rem 1rem 0;
 
   @media (min-width: $lg) {
-    padding: 8rem 0 5rem;
+    padding: 7rem 0 0;
   }
 
   &-decoration {
@@ -127,14 +127,6 @@
   }
 }
 
-.service-features {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
-
 .service-features-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -194,14 +186,6 @@
     line-height: 1.7;
     color: rgba($white-text-color-rgb, 0.6);
     margin: 0;
-  }
-}
-
-.service-benefits {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
   }
 }
 
@@ -298,14 +282,6 @@
 
 // === Scope section (BW) ===
 
-.service-scope {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
-
 .service-scope-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -384,14 +360,6 @@
 }
 
 // === Mini process (BW) ===
-
-.service-process-mini {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
 
 .service-process-steps {
   display: grid;
@@ -488,14 +456,6 @@
 }
 
 // === Dashboard preview (EC) ===
-
-.service-dashboard {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
 
 .service-dashboard-preview {
   max-width: 900px;
@@ -628,14 +588,6 @@
 
 // === Integrations (EC) ===
 
-.service-integrations {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
-
 .service-integrations-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -677,14 +629,6 @@
 }
 
 // === Metrics comparison (LP) ===
-
-.service-metrics {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
 
 .service-metrics-comparison {
   display: flex;
@@ -793,14 +737,6 @@
 
 // === Sprint timeline (LP) ===
 
-.service-sprint {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
-
 .service-sprint-timeline {
   position: relative;
   max-width: 700px;
@@ -888,14 +824,6 @@
 }
 
 // === Before/after comparison (WR) ===
-
-.service-comparison {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
 
 .service-comparison-cards {
   display: flex;
@@ -991,14 +919,6 @@
 
 // === Upgrade areas (WR) ===
 
-.service-upgrade-areas {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
-
 .service-upgrade-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1088,14 +1008,6 @@
 
 // === Tech stack (CP) ===
 
-.service-techstack {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
-
 .service-techstack-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1154,14 +1066,6 @@
 }
 
 // === Project phases (CP) ===
-
-.service-phases {
-  padding: 4rem 1rem;
-
-  @media (min-width: $lg) {
-    padding: 5rem 0;
-  }
-}
 
 .service-phases-grid {
   display: grid;

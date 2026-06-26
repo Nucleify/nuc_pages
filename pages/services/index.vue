@@ -25,6 +25,8 @@
       </div>
     </section>
 
+    <ad-spacing />
+
     <section class="service-features">
       <div class="container">
         <div class="service-features-grid">
@@ -47,8 +49,12 @@
       </div>
     </section>
 
+    <ad-spacing />
+
     <LazyNucSectionFaq site="home" />
+    <ad-spacing />
     <LazyNucSectionContact />
+    <ad-spacing />
   </div>
 </template>
 

@@ -23,6 +23,7 @@
         <nuc-trust-badges :items="trustItems" />
       </div>
     </section>
+    <ad-spacing />
 
     <section class="service-features">
       <div class="container">
@@ -41,6 +42,7 @@
         </div>
       </div>
     </section>
+    <ad-spacing />
 
     <section class="service-scope">
       <div class="container">
@@ -74,6 +76,7 @@
         </div>
       </div>
     </section>
+    <ad-spacing />
 
     <section class="service-process-mini">
       <div class="container">
@@ -108,6 +111,7 @@
         </div>
       </div>
     </section>
+    <ad-spacing />
 
     <section class="service-benefits">
       <div class="container">
@@ -135,8 +139,10 @@
         </div>
       </div>
     </section>
+    <ad-spacing />
 
     <LazyNucSectionFaq site="home" />
+    <ad-spacing />
     <LazyNucSectionContact />
   </div>
 </template>

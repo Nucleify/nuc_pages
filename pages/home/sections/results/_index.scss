@@ -1,10 +1,8 @@
 #results {
   background: $bg-dark-color;
-  width: calc(100% + 2rem);
-  padding: 6rem 1rem;
+  width: 100%;
   position: relative;
   overflow: hidden;
-  margin: 0 -1rem;
 
   .results-glow {
     position: absolute;
@@ -321,10 +319,6 @@
   }
 
   @media (min-width: $md) {
-    width: 100%;
-    margin: 0;
-    padding: 7rem 2rem;
-
     .results-heading {
       font-size: 2.5rem;
 
@@ -378,8 +372,6 @@
   }
 
   @media (min-width: $lg) {
-    padding: 8rem 2rem;
-
     .results-heading {
       font-size: 2.75rem;
 

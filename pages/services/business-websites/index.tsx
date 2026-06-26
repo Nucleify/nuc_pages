@@ -4,6 +4,7 @@ import type { JSX } from 'react'
 
 import {
   AdIcon,
+  AdSpacing,
   NucSectionContact,
   NucSectionFaq,
   NucShinyBadge,
@@ -131,6 +132,7 @@ export function NucBusinessWebsitesPage(): JSX.Element {
           <NucTrustBadges items={trustItems} />
         </div>
       </section>
+      <AdSpacing />
 
       <section className="service-features">
         <div className="container">
@@ -147,6 +149,7 @@ export function NucBusinessWebsitesPage(): JSX.Element {
           </div>
         </div>
       </section>
+      <AdSpacing />
 
       <section className="service-scope">
         <div className="container service-scope-layout">
@@ -175,6 +178,7 @@ export function NucBusinessWebsitesPage(): JSX.Element {
           </div>
         </div>
       </section>
+      <AdSpacing />
 
       <section className="service-process-mini">
         <div className="container">
@@ -203,6 +207,7 @@ export function NucBusinessWebsitesPage(): JSX.Element {
           </div>
         </div>
       </section>
+      <AdSpacing />
 
       <section className="service-benefits">
         <div className="container">
@@ -227,8 +232,10 @@ export function NucBusinessWebsitesPage(): JSX.Element {
           </div>
         </div>
       </section>
+      <AdSpacing />
 
       <NucSectionFaq site="home" />
+      <AdSpacing />
       <NucSectionContact />
     </div>
   )

@@ -2,8 +2,7 @@
   position: relative;
   min-height: 80vh;
   scroll-margin-top: 5rem;
-  background: $bg-dark-green-color;
-  margin: 0 -1rem;
+  z-index: 1;
 
   .start-container {
     display: flex;
@@ -11,13 +10,11 @@
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
 
     @media (min-width: $lg) {
       flex-direction: row;
       align-items: center;
       gap: 4rem;
-      padding: 7rem 0;
     }
   }
 
