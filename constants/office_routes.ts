@@ -2,7 +2,6 @@ export const officeRoutes = {
   back: [
     'activity-log',
     'admin',
-    'builder',
     'calendar',
     'entities',
     'files',

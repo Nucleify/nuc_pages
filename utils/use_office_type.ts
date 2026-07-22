@@ -8,6 +8,7 @@ function isMinimalShellPath(path: string): boolean {
   if (segments.length < 2) return false
   const page = segments[1]
   return (
+    page === 'builder' ||
     page === 'docs' ||
     page === 'login' ||
     page === 'register' ||
