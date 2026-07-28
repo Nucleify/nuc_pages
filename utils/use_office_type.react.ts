@@ -3,34 +3,40 @@
 import { usePathname } from 'next/navigation'
 import { useMemo } from 'react'
 
-import { isAnyCurrentUrl, officeRoutes } from 'nucleify'
+import { officeRoutes, pathIsBackOffice } from '../constants/office_routes'
 
-export type OfficeType = 'default' | 'front-office' | 'back-office'
-
-export function getOfficeType(pathname?: string): OfficeType {
-  const path = pathname ?? ''
-
-  if (isAnyCurrentUrl([...officeRoutes.front], path)) {
-    return 'front-office'
-  }
-  if (isAnyCurrentUrl([...officeRoutes.back], path)) {
-    return 'back-office'
-  }
-  return 'default'
+function isMinimalShellPath(path: string): boolean {
+  const segments = path.split('/').filter(Boolean)
+  if (segments.length < 2) return false
+  const page = segments[1]
+  return (
+    page === 'builder' ||
+    page === 'docs' ||
+    page === 'login' ||
+    page === 'register' ||
+    page === 'thank-you'
+  )
 }
 
-export function useOfficeType(initialPath = ''): {
-  officeType: OfficeType
-  getOfficeType: (pathname?: string) => OfficeType
-} {
-  const pathname = usePathname()
-  const officeType = useMemo(
-    () => getOfficeType(pathname || initialPath),
-    [pathname, initialPath]
-  )
+export function useOfficeType() {
+  const pathname = usePathname() || '/'
+
+  const officeType = useMemo(() => {
+    if (
+      pathIsBackOffice(pathname) ||
+      officeRoutes.back.some((r) => pathname.includes(r))
+    ) {
+      return 'back-office'
+    }
+    if (officeRoutes.front.some((r) => pathname.includes(r))) {
+      return 'front-office'
+    }
+    if (isMinimalShellPath(pathname)) return 'default'
+    return 'front-office'
+  }, [pathname])
 
   return {
     officeType,
-    getOfficeType,
+    getOfficeType: () => officeType,
   }
 }

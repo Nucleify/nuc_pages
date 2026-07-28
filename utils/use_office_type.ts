@@ -1,7 +1,7 @@
 import { useRoute } from 'nuxt/app'
 import { ref } from 'vue'
 
-import { isAnyCurrentUrl, officeRoutes, pathIsBackOffice } from 'nucleify'
+import { officeRoutes, pathIsBackOffice } from '../constants/office_routes'
 
 function isMinimalShellPath(path: string): boolean {
   const segments = path.split('/').filter(Boolean)
@@ -23,9 +23,12 @@ export function useOfficeType() {
     const route = useRoute()
     const path = route.path
 
-    if (pathIsBackOffice(path) || isAnyCurrentUrl(officeRoutes.back))
+    if (
+      pathIsBackOffice(path) ||
+      officeRoutes.back.some((r) => path.includes(r))
+    )
       return 'back-office'
-    if (isAnyCurrentUrl(officeRoutes.front)) return 'front-office'
+    if (officeRoutes.front.some((r) => path.includes(r))) return 'front-office'
     if (isMinimalShellPath(path)) return 'default'
     return 'front-office'
   }

@@ -1,6 +1,6 @@
 # <img src="https://nucleify.io/favicon.ico" width="17" height="17" /> &nbsp; nuc_pages
 
-Module that contains pages functions.
+Module that contains page and navigation functions.
 
 <br>
 
